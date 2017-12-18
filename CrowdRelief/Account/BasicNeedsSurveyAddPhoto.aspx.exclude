@@ -1,0 +1,189 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="BasicNeedsSurveyAddPhoto.aspx.cs" Inherits="CrowdRelief.Account_BasicNeedsSurveyAddPhoto" %>
+<%@ MasterType VirtualPath="~/MasterPage.master" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<script language="javascript">
+
+			$(document).ready(function () {
+
+				$("#spBtnTwo").hide();
+				$("#spBtnOne").hide();
+
+			});
+
+			function startManualUpload() {
+				var upload = $find('<%=RadAsyncUpload1.ClientID%>');
+				upload.startUpload();
+
+				
+				$("#btnSubmit").hide();
+
+				$("#spBtnTwo").show();
+				$("#spBtnOne").hide();
+			}
+
+			function showPreview(sender, eventArgs) {
+				$("#spBtnOne").show();
+				$("#thumbnail").attr("style", "border:solid 2px #cccccc; padding:2px;");
+
+				$("#spCommentPhotoButtons").hide();
+
+				//Hide the .remove link.
+				if ($telerik.isIE) {
+					$("#thumbnail").hide();
+				}
+
+				if ($telerik.isIE) {
+					var input = eventArgs.get_fileInputField();
+					if (sender.isExtensionValid(input.value)) {
+						var img = document.createElement("img");
+						var thumbnail = document.getElementById("thumbnail");
+						thumbnail.appendChild(img);
+						if (img) {
+							//img.style.visibility = "";
+							//img.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = input.value;
+						}
+					}
+				}
+				else {
+					var file = eventArgs.get_fileInputField().files.item(eventArgs.get_rowIndex());
+					if (!file) {
+						showThumbnail(droppedFile);
+					}
+					else {
+						showThumbnail(file);
+					}
+				}
+			}
+
+			function showThumbnail(file) {
+				var image = document.createElement("img");
+				image.width = 200;
+				var thumbnail = document.getElementById("thumbnail");
+
+				image.file = file;
+				thumbnail.appendChild(image);
+
+				var reader = new FileReader();
+				reader.onload = (function (aImg) {
+					return function (e) {
+						aImg.src = e.target.result;
+					};
+				} (image))
+
+				var ret = reader.readAsDataURL(file);
+				var canvas = document.createElement("canvas");
+
+				ctx = canvas.getContext("2d");
+				image.onload = function () {
+					ctx.drawImage(image, 10, 10, 50, 50);
+				}
+			}
+		</script>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<div class="container help-1" id="divFormFields" runat="server">
+		<telerik:RadScriptManager runat="server" ID="RadScriptManager1" />
+			<div class="row">
+				<div class="col-xs-1 col-sm-2"></div>
+				<div class="col-xs-10 col-sm-8 bg-5"> 
+					<div  class="form-horizontal">
+						<fieldset>
+
+							<!-- Form Name -->
+							<legend><h1>Add A Photo</h1></legend>
+							<small>
+								Great photos will help your campaign raise more money. A photo is required.
+							</small>
+								<br /><br />
+							<!-- Form -->
+
+
+									<div class="narrowBodyContent">
+										<div class="contentBorder">
+											<table cellpadding="5">
+												<tr>
+													<td></td>
+													<td>
+														<div id="divPhoto" class="divPhoto" runat="server">
+															<asp:Label ID="lblMessage" runat="server"></asp:Label><br /><br />
+															<div id="thumbnail"></div>
+															<telerik:RadAsyncUpload 
+																InputSize="8"
+																MaxFileInputsCount="1"
+																OnClientFileSelected="showPreview" 
+																OnFileUploaded="RadAsyncUpload1_FileUploaded"
+																runat="server"
+																AllowedFileExtensions="jpeg,jpg,gif,png" 
+																ID="RadAsyncUpload1" 
+																TargetFolder="~/Images/Campaigns"
+																ManualUpload="true"
+																MultipleFileSelection="Disabled"/>
+															<span id="spBtnOne">
+																<input id="btnStartUpload" class="btn btn-primary" type="button" onclick="startManualUpload()" value="Start Upload"/>
+															</span>
+															<span id="spBtnTwo">
+																<asp:Button ID="btnUpdate" runat="server" CssClass="btn btn-success" Text=" Next Step > " CausesValidation="false" OnClick="btnSave_Click" />
+															</span>
+														</div>
+													</td>
+												</tr>
+											</table>
+											<table cellpadding="5" runat="server" id="tableForm" visible="false">
+												<tr>	
+													<td>
+														<div style="padding:20px;">
+															<asp:Image ID="imgThumbnail" runat="server" />
+															<asp:HiddenField ID="hidImageName" runat="server" />
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div style="padding:10px;">
+															Image Name:
+															<br />
+															<asp:TextBox ID="txtImageName" Width="300" MaxLength="155" runat="server"></asp:TextBox>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div style="padding:10px;">
+															Description:
+															<br />
+															<asp:TextBox TextMode="MultiLine" Width="300" Height="200" ID="txtDescription" runat="server"></asp:TextBox>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td align="right">
+														<div style="padding:10px;">
+															<asp:Button ID="btnCancel" CssClass="btn btn-warning" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
+															<asp:Button ID="btnPost" CssClass="btn btn-success" runat="server" Text="Save Photo" OnClick="btnPost_Click" />
+														</div>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+
+
+							<!-- Button -->
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="btnSubmit"></label>
+								<div class="col-md-4">
+								<asp:Button	 id="btnSubmit" runat="server" name="btnSubmit" Text="Add Photo" Visible="false" class="btn btn-primary"></asp:Button>
+								</div>
+							</div>
+
+						</fieldset>
+					</div>
+				</div>
+				<div class="col-xs-1 col-sm-2"></div>
+			</div>
+		</div>
+
+		<div class="divRegisterFormOuter">
+		</div>
+</asp:Content>

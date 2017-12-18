@@ -1,0 +1,893 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CrowdRelief" Class="CrowdReliefDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=ROBS-LAPTOP;Initial Catalog=CrowdRelief;Integrated Security=False;User ID=CrowdRelief;MultipleActiveResultSets=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="CrowdReliefConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Address" Member="Addresses">
+    <Type Name="Address">
+      <Column Name="AddressId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Address" Member="Address1" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="Address2" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Zip" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Latitude" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Longitude" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UpdatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdatedBy" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="Address_BasicNeedsSurvey" Member="BasicNeedsSurveys" ThisKey="AddressId" OtherKey="AddressId" Type="BasicNeedsSurvey" />
+      <Association Name="Address_RebuildSurvey" Member="RebuildSurveys" ThisKey="AddressId" OtherKey="AddressId" Type="RebuildSurvey" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Video" Member="Videos">
+    <Type Name="Video">
+      <Column Name="VideoId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EmbedCode" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Hidden" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Video_SurveyVideo" Member="SurveyVideos" ThisKey="VideoId" OtherKey="VideoId" Type="SurveyVideo" />
+      <Association Name="aspnet_User_Video" Member="aspnet_User" ThisKey="CreatedBy" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_Applications" Member="aspnet_Applications">
+    <Type Name="aspnet_Application">
+      <Column Name="ApplicationName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="LoweredApplicationName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="ApplicationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Association Name="aspnet_Application_aspnet_Membership" Member="aspnet_Memberships" ThisKey="ApplicationId" OtherKey="ApplicationId" Type="aspnet_Membership" />
+      <Association Name="aspnet_Application_aspnet_Path" Member="aspnet_Paths" ThisKey="ApplicationId" OtherKey="ApplicationId" Type="aspnet_Path" />
+      <Association Name="aspnet_Application_aspnet_Role" Member="aspnet_Roles" ThisKey="ApplicationId" OtherKey="ApplicationId" Type="aspnet_Role" />
+      <Association Name="aspnet_Application_aspnet_User" Member="aspnet_Users" ThisKey="ApplicationId" OtherKey="ApplicationId" Type="aspnet_User" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_Membership" Member="aspnet_Memberships">
+    <Type Name="aspnet_Membership">
+      <Column Name="ApplicationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="PasswordFormat" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PasswordSalt" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="MobilePIN" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="LoweredEmail" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="PasswordQuestion" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="PasswordAnswer" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="IsApproved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsLockedOut" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastLoginDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastPasswordChangedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastLockoutDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FailedPasswordAttemptCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FailedPasswordAttemptWindowStart" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FailedPasswordAnswerAttemptCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FailedPasswordAnswerAttemptWindowStart" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Comment" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="aspnet_Application_aspnet_Membership" Member="aspnet_Application" ThisKey="ApplicationId" OtherKey="ApplicationId" Type="aspnet_Application" IsForeignKey="true" />
+      <Association Name="aspnet_User_aspnet_Membership" Member="aspnet_User" ThisKey="UserId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_Paths" Member="aspnet_Paths">
+    <Type Name="aspnet_Path">
+      <Column Name="ApplicationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PathId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Path" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="LoweredPath" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_Path_aspnet_PersonalizationAllUser" Member="aspnet_PersonalizationAllUser" ThisKey="PathId" OtherKey="PathId" Type="aspnet_PersonalizationAllUser" Cardinality="One" />
+      <Association Name="aspnet_Path_aspnet_PersonalizationPerUser" Member="aspnet_PersonalizationPerUsers" ThisKey="PathId" OtherKey="PathId" Type="aspnet_PersonalizationPerUser" />
+      <Association Name="aspnet_Application_aspnet_Path" Member="aspnet_Application" ThisKey="ApplicationId" OtherKey="ApplicationId" Type="aspnet_Application" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_PersonalizationAllUsers" Member="aspnet_PersonalizationAllUsers">
+    <Type Name="aspnet_PersonalizationAllUser">
+      <Column Name="PathId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PageSettings" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LastUpdatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_Path_aspnet_PersonalizationAllUser" Member="aspnet_Path" ThisKey="PathId" OtherKey="PathId" Type="aspnet_Path" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_PersonalizationPerUser" Member="aspnet_PersonalizationPerUsers">
+    <Type Name="aspnet_PersonalizationPerUser">
+      <Column Name="Id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PathId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="PageSettings" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LastUpdatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_Path_aspnet_PersonalizationPerUser" Member="aspnet_Path" ThisKey="PathId" OtherKey="PathId" Type="aspnet_Path" IsForeignKey="true" />
+      <Association Name="aspnet_User_aspnet_PersonalizationPerUser" Member="aspnet_User" ThisKey="UserId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_Profile" Member="aspnet_Profiles">
+    <Type Name="aspnet_Profile">
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PropertyNames" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PropertyValuesString" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PropertyValuesBinary" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LastUpdatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_User_aspnet_Profile" Member="aspnet_User" ThisKey="UserId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_Roles" Member="aspnet_Roles">
+    <Type Name="aspnet_Role">
+      <Column Name="ApplicationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="RoleId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RoleName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="LoweredRoleName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Association Name="aspnet_Role_aspnet_UsersInRole" Member="aspnet_UsersInRoles" ThisKey="RoleId" OtherKey="RoleId" Type="aspnet_UsersInRole" />
+      <Association Name="aspnet_Application_aspnet_Role" Member="aspnet_Application" ThisKey="ApplicationId" OtherKey="ApplicationId" Type="aspnet_Application" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_SchemaVersions" Member="aspnet_SchemaVersions">
+    <Type Name="aspnet_SchemaVersion">
+      <Column Name="Feature" Type="System.String" DbType="NVarChar(128) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CompatibleSchemaVersion" Type="System.String" DbType="NVarChar(128) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IsCurrentVersion" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_Users" Member="aspnet_Users">
+    <Type Name="aspnet_User">
+      <Column Name="ApplicationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="LoweredUserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="MobileAlias" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="IsAnonymous" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastActivityDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_User_Video" Member="Videos" ThisKey="UserId" OtherKey="CreatedBy" Type="Video" />
+      <Association Name="aspnet_User_aspnet_Membership" Member="aspnet_Membership" ThisKey="UserId" OtherKey="UserId" Type="aspnet_Membership" Cardinality="One" />
+      <Association Name="aspnet_User_aspnet_PersonalizationPerUser" Member="aspnet_PersonalizationPerUsers" ThisKey="UserId" OtherKey="UserId" Type="aspnet_PersonalizationPerUser" />
+      <Association Name="aspnet_User_aspnet_Profile" Member="aspnet_Profile" ThisKey="UserId" OtherKey="UserId" Type="aspnet_Profile" Cardinality="One" />
+      <Association Name="aspnet_User_aspnet_UsersInRole" Member="aspnet_UsersInRoles" ThisKey="UserId" OtherKey="UserId" Type="aspnet_UsersInRole" />
+      <Association Name="aspnet_User_BasicNeedsCaseNote" Member="BasicNeedsCaseNotes" ThisKey="UserId" OtherKey="UserId" Type="BasicNeedsCaseNote" />
+      <Association Name="aspnet_User_BasicNeedsSurvey" Member="BasicNeedsSurveys" ThisKey="UserId" OtherKey="CreatedBy" Type="BasicNeedsSurvey" />
+      <Association Name="aspnet_User_BasicNeedsSurvey1" Member="BasicNeedsSurveys1" ThisKey="UserId" OtherKey="UpdatedBy" Type="BasicNeedsSurvey" />
+      <Association Name="aspnet_User_Event" Member="Events" ThisKey="UserId" OtherKey="CreatedBy" Type="Event" />
+      <Association Name="aspnet_User_Help" Member="Helps" ThisKey="UserId" OtherKey="UserId" Type="Help" />
+      <Association Name="aspnet_User_HelpHelpStatus" Member="HelpHelpStatus" ThisKey="UserId" OtherKey="CreatedBy" Type="HelpHelpStatus" />
+      <Association Name="aspnet_User_Member" Member="Members" ThisKey="UserId" OtherKey="UserId" Type="Member" />
+      <Association Name="aspnet_User_Porchlight" Member="Porchlights" ThisKey="UserId" OtherKey="UserId" Type="Porchlight" />
+      <Association Name="aspnet_User_RebuildPost" Member="RebuildPosts" ThisKey="UserId" OtherKey="UserId" Type="RebuildPost" />
+      <Association Name="aspnet_User_RebuildSliderTick" Member="RebuildSliderTicks" ThisKey="UserId" OtherKey="CreatedBy" Type="RebuildSliderTick" />
+      <Association Name="aspnet_User_SurveyCaseWorker" Member="SurveyCaseWorkers" ThisKey="UserId" OtherKey="UserId" Type="SurveyCaseWorker" />
+      <Association Name="aspnet_User_Timesheet" Member="Timesheets" ThisKey="UserId" OtherKey="UserId" Type="Timesheet" />
+      <Association Name="aspnet_User_UserEvent" Member="UserEvents" ThisKey="UserId" OtherKey="UserId" Type="UserEvent" />
+      <Association Name="aspnet_User_UserInteractionType" Member="UserInteractionTypes" ThisKey="UserId" OtherKey="UserId" Type="UserInteractionType" />
+      <Association Name="aspnet_User_UserSkill" Member="UserSkills" ThisKey="UserId" OtherKey="UserId" Type="UserSkill" />
+      <Association Name="aspnet_User_UserSliderTick" Member="UserSliderTicks" ThisKey="UserId" OtherKey="UserId" Type="UserSliderTick" />
+      <Association Name="aspnet_User_UserTask" Member="UserTasks" ThisKey="UserId" OtherKey="UserId" Type="UserTask" />
+      <Association Name="aspnet_User_Organization" Member="Organizations" ThisKey="UserId" OtherKey="CreatedBy" Type="Organization" />
+      <Association Name="aspnet_User_Profile" Member="Profiles" ThisKey="UserId" OtherKey="UserId" Type="Profile" />
+      <Association Name="aspnet_User_Rebuild" Member="Rebuilds" ThisKey="UserId" OtherKey="CreatedBy" Type="Rebuild" />
+      <Association Name="aspnet_User_Rebuild1" Member="Rebuilds1" ThisKey="UserId" OtherKey="UpdatedBy" Type="Rebuild" />
+      <Association Name="aspnet_User_Rebuild2" Member="Rebuilds2" ThisKey="UserId" OtherKey="SurvivorId" Type="Rebuild" />
+      <Association Name="aspnet_User_UserOrganization" Member="UserOrganizations" ThisKey="UserId" OtherKey="UserId" Type="UserOrganization" />
+      <Association Name="aspnet_Application_aspnet_User" Member="aspnet_Application" ThisKey="ApplicationId" OtherKey="ApplicationId" Type="aspnet_Application" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_UsersInRoles" Member="aspnet_UsersInRoles">
+    <Type Name="aspnet_UsersInRole">
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RoleId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="aspnet_Role_aspnet_UsersInRole" Member="aspnet_Role" ThisKey="RoleId" OtherKey="RoleId" Type="aspnet_Role" IsForeignKey="true" />
+      <Association Name="aspnet_User_aspnet_UsersInRole" Member="aspnet_User" ThisKey="UserId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_WebEvent_Events" Member="aspnet_WebEvent_Events">
+    <Type Name="aspnet_WebEvent_Event">
+      <Column Name="EventId" Type="System.String" DbType="Char(32) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EventTimeUtc" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EventTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EventType" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="EventSequence" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL" CanBeNull="false" />
+      <Column Name="EventOccurrence" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL" CanBeNull="false" />
+      <Column Name="EventCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EventDetailCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" />
+      <Column Name="ApplicationPath" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="ApplicationVirtualPath" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="MachineName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="RequestUrl" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" />
+      <Column Name="ExceptionType" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Details" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BasicNeedsCampaign" Member="BasicNeedsCampaigns">
+    <Type Name="BasicNeedsCampaign">
+      <Column Name="BasicNeedsCampaignId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BasicNeedsSurveyId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="BeginDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UpdatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdatedBy" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Hidden" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="BasicNeedsCampaign_Donation" Member="Donations" ThisKey="BasicNeedsCampaignId" OtherKey="CampaignId" Type="Donation" />
+      <Association Name="BasicNeedsSurvey_BasicNeedsCampaign" Member="BasicNeedsSurvey" ThisKey="BasicNeedsSurveyId" OtherKey="SurveyId" Type="BasicNeedsSurvey" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BasicNeedsCaseNote" Member="BasicNeedsCaseNotes">
+    <Type Name="BasicNeedsCaseNote">
+      <Column Name="BasicNeedsCaseNoteId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SurveyId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="BasicNeedsStatusId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="HouseConditionNote" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="FamilyConditionNote" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="FollowUpNote" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="FollowUpDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TotalMoneySpent" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UrgentAttentionNeeded" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_User_BasicNeedsCaseNote" Member="aspnet_User" ThisKey="UserId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+      <Association Name="BasicNeedsStatus_BasicNeedsCaseNote" Member="BasicNeedsStatus" ThisKey="BasicNeedsStatusId" OtherKey="BasicNeedsStatusId" Type="BasicNeedsStatus" IsForeignKey="true" />
+      <Association Name="BasicNeedsSurvey_BasicNeedsCaseNote" Member="BasicNeedsSurvey" ThisKey="SurveyId" OtherKey="SurveyId" Type="BasicNeedsSurvey" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BasicNeedsStatus" Member="BasicNeedsStatus">
+    <Type Name="BasicNeedsStatus">
+      <Column Name="BasicNeedsStatusId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="OrderBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="BasicNeedsStatus_BasicNeedsCaseNote" Member="BasicNeedsCaseNotes" ThisKey="BasicNeedsStatusId" OtherKey="BasicNeedsStatusId" Type="BasicNeedsCaseNote" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BasicNeedsSurvey" Member="BasicNeedsSurveys">
+    <Type Name="BasicNeedsSurvey">
+      <Column Name="SurveyId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SurveyNumber" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FEMANumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EmailAddress" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="HomeLossAddress" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="HomeLossCity" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="HomeLossParishCounty" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="HomeLossState" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="HomeLossZipCode" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="NumberOfPeopleAffected" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NumberOfBedrooms" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NumberOfBathrooms" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RebuildRepairNeeded" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ImmediateHousingNeeded" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SupportAlreadyBeingProvided" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdatedBy" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="HelpDetails" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Story" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Hidden" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="OrganizationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Latitude" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Longitude" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AddressId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="BasicNeedsSurvey_BasicNeedsCampaign" Member="BasicNeedsCampaigns" ThisKey="SurveyId" OtherKey="BasicNeedsSurveyId" Type="BasicNeedsCampaign" />
+      <Association Name="BasicNeedsSurvey_BasicNeedsCaseNote" Member="BasicNeedsCaseNotes" ThisKey="SurveyId" OtherKey="SurveyId" Type="BasicNeedsCaseNote" />
+      <Association Name="BasicNeedsSurvey_BasicNeedsSurvey" Member="BasicNeedsSurvey2" ThisKey="SurveyId" OtherKey="SurveyId" Type="BasicNeedsSurvey" Cardinality="One" />
+      <Association Name="BasicNeedsSurvey_BasicNeedsSurveyItem" Member="BasicNeedsSurveyItems" ThisKey="SurveyId" OtherKey="SurveyId" Type="BasicNeedsSurveyItem" />
+      <Association Name="BasicNeedsSurvey_SurveyPhoto" Member="SurveyPhotos" ThisKey="SurveyId" OtherKey="SurveyId" Type="SurveyPhoto" />
+      <Association Name="BasicNeedsSurvey_SurveyTimesheet" Member="SurveyTimesheets" ThisKey="SurveyId" OtherKey="SurveyId" Type="SurveyTimesheet" />
+      <Association Name="Address_BasicNeedsSurvey" Member="Address" ThisKey="AddressId" OtherKey="AddressId" Type="Address" IsForeignKey="true" />
+      <Association Name="aspnet_User_BasicNeedsSurvey" Member="aspnet_User" ThisKey="CreatedBy" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+      <Association Name="aspnet_User_BasicNeedsSurvey1" Member="aspnet_User1" ThisKey="UpdatedBy" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+      <Association Name="BasicNeedsSurvey_BasicNeedsSurvey" Member="BasicNeedsSurvey1" ThisKey="SurveyId" OtherKey="SurveyId" Type="BasicNeedsSurvey" IsForeignKey="true" />
+      <Association Name="Organization_BasicNeedsSurvey" Member="Organization" ThisKey="OrganizationId" OtherKey="OrganizationId" Type="Organization" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BasicNeedsSurveyItem" Member="BasicNeedsSurveyItems">
+    <Type Name="BasicNeedsSurveyItem">
+      <Column Name="BasicSurveyItemId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ItemId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="SurveyId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Count" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="BasicNeedsSurveyItem_Donation" Member="Donations" ThisKey="BasicSurveyItemId" OtherKey="BasicNeedsSurveyItemId" Type="Donation" />
+      <Association Name="BasicNeedsSurvey_BasicNeedsSurveyItem" Member="BasicNeedsSurvey" ThisKey="SurveyId" OtherKey="SurveyId" Type="BasicNeedsSurvey" IsForeignKey="true" />
+      <Association Name="Item_BasicNeedsSurveyItem" Member="Item" ThisKey="ItemId" OtherKey="ItemId" Type="Item" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DisasterStage" Member="DisasterStages">
+    <Type Name="DisasterStage">
+      <Column Name="DisasterStageId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="DisasterStage_EventDisasterStage" Member="EventDisasterStages" ThisKey="DisasterStageId" OtherKey="DisasterStageId" Type="EventDisasterStage" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Donation" Member="Donations">
+    <Type Name="Donation">
+      <Column Name="DonationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EmailAddress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CampaignId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="BasicNeedsSurveyItemId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="TransactionId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="OrderId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AuthorizedTransactionId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SettlementBatchId" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="IsTest" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedAt" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ItemCostEach" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ItemCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="BasicNeedsCampaign_Donation" Member="BasicNeedsCampaign" ThisKey="CampaignId" OtherKey="BasicNeedsCampaignId" Type="BasicNeedsCampaign" IsForeignKey="true" />
+      <Association Name="BasicNeedsSurveyItem_Donation" Member="BasicNeedsSurveyItem" ThisKey="BasicNeedsSurveyItemId" OtherKey="BasicSurveyItemId" Type="BasicNeedsSurveyItem" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Event" Member="Events">
+    <Type Name="Event">
+      <Column Name="EventId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="URLFriendlyName" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="BeginDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsDisaster" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Event_EventDisasterStage" Member="EventDisasterStages" ThisKey="EventId" OtherKey="EventId" Type="EventDisasterStage" />
+      <Association Name="Event_OrganizationEvent" Member="OrganizationEvents" ThisKey="EventId" OtherKey="EventId" Type="OrganizationEvent" />
+      <Association Name="Event_UserEvent" Member="UserEvents" ThisKey="EventId" OtherKey="EventId" Type="UserEvent" />
+      <Association Name="aspnet_User_Event" Member="aspnet_User" ThisKey="CreatedBy" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EventDisasterStage" Member="EventDisasterStages">
+    <Type Name="EventDisasterStage">
+      <Column Name="EventDisasterStageId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EventId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="DisasterStageId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="DisasterStage_EventDisasterStage" Member="DisasterStage" ThisKey="DisasterStageId" OtherKey="DisasterStageId" Type="DisasterStage" IsForeignKey="true" />
+      <Association Name="Event_EventDisasterStage" Member="Event" ThisKey="EventId" OtherKey="EventId" Type="Event" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Help" Member="Helps">
+    <Type Name="Help">
+      <Column Name="HelpId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HelpNumber" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IsUrgent" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsPublic" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Help_HelpHelpStatus" Member="HelpHelpStatus" ThisKey="HelpId" OtherKey="HelpId" Type="HelpHelpStatus" />
+      <Association Name="Help_HelpTask" Member="HelpTasks" ThisKey="HelpId" OtherKey="HelpId" Type="HelpTask" />
+      <Association Name="aspnet_User_Help" Member="aspnet_User" ThisKey="UserId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HelpHelpStatus" Member="HelpHelpStatus">
+    <Type Name="HelpHelpStatus">
+      <Column Name="HelpHelpStatusId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HelpId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="HelpStatusId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_User_HelpHelpStatus" Member="aspnet_User" ThisKey="CreatedBy" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+      <Association Name="Help_HelpHelpStatus" Member="Help" ThisKey="HelpId" OtherKey="HelpId" Type="Help" IsForeignKey="true" />
+      <Association Name="HelpStatus_HelpHelpStatus" Member="HelpStatus" ThisKey="HelpStatusId" OtherKey="HelpStatusId" Type="HelpStatus" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HelpStatus" Member="HelpStatus">
+    <Type Name="HelpStatus">
+      <Column Name="HelpStatusId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Rank" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="HelpStatus_HelpHelpStatus" Member="HelpHelpStatus" ThisKey="HelpStatusId" OtherKey="HelpStatusId" Type="HelpHelpStatus" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HelpTask" Member="HelpTasks">
+    <Type Name="HelpTask">
+      <Column Name="HelpTaskId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HelpId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="TaskId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="Help_HelpTask" Member="Help" ThisKey="HelpId" OtherKey="HelpId" Type="Help" IsForeignKey="true" />
+      <Association Name="Task_HelpTask" Member="Task" ThisKey="TaskId" OtherKey="TaskId" Type="Task" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.InteractionType" Member="InteractionTypes">
+    <Type Name="InteractionType">
+      <Column Name="InteractionTypeId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Lookup" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="InteractionType_UserInteractionType" Member="UserInteractionTypes" ThisKey="InteractionTypeId" OtherKey="InteractionTypeId" Type="UserInteractionType" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Item" Member="Items">
+    <Type Name="Item">
+      <Column Name="ItemId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="ItemTypeId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Cost" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ItemSubTypeId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="Item_BasicNeedsSurveyItem" Member="BasicNeedsSurveyItems" ThisKey="ItemId" OtherKey="ItemId" Type="BasicNeedsSurveyItem" />
+      <Association Name="ItemSubType_Item" Member="ItemSubType" ThisKey="ItemSubTypeId" OtherKey="ItemSubTypeId" Type="ItemSubType" IsForeignKey="true" />
+      <Association Name="ItemType_Item" Member="ItemType" ThisKey="ItemTypeId" OtherKey="ItemTypeId" Type="ItemType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ItemSubType" Member="ItemSubTypes">
+    <Type Name="ItemSubType">
+      <Column Name="ItemSubTypeId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SubType" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="ItemSubType_Item" Member="Items" ThisKey="ItemSubTypeId" OtherKey="ItemSubTypeId" Type="Item" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ItemType" Member="ItemTypes">
+    <Type Name="ItemType">
+      <Column Name="ItemTypeId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Association Name="ItemType_Item" Member="Items" ThisKey="ItemTypeId" OtherKey="ItemTypeId" Type="Item" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Member" Member="Members">
+    <Type Name="Member">
+      <Column Name="MemberId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="SocialNetwork" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="OAuthUserId" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="AccessToken" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="EmailAddress" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="MobileNumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Fullname" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Birthday" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SocialURL" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Firstname" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Lastname" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Timezone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Locale" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="IsAdmin" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PorchlightActive" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ReceivePromoPush" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TwitterOAuthToken" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TwitterAccessToken" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IsFacebookFixed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ProfileImage" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="LastUpdatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RegionId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="Member_MemberSession" Member="MemberSessions" ThisKey="MemberId" OtherKey="MemberId" Type="MemberSession" />
+      <Association Name="aspnet_User_Member" Member="aspnet_User" ThisKey="UserId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MemberSession" Member="MemberSessions">
+    <Type Name="MemberSession">
+      <Column Name="MemberSessionId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MemberId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AccessDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Member_MemberSession" Member="Member" ThisKey="MemberId" OtherKey="MemberId" Type="Member" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrganizationEvent" Member="OrganizationEvents">
+    <Type Name="OrganizationEvent">
+      <Column Name="OrganizationEventId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OrganizationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="EventId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="Event_OrganizationEvent" Member="Event" ThisKey="EventId" OtherKey="EventId" Type="Event" IsForeignKey="true" />
+      <Association Name="Organization_OrganizationEvent" Member="Organization" ThisKey="OrganizationId" OtherKey="OrganizationId" Type="Organization" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrganizationRebuild" Member="OrganizationRebuilds">
+    <Type Name="OrganizationRebuild">
+      <Column Name="OrganizationRebuildId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OrganizationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="RebuildId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="IsPrimaryOrganization" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Organization_OrganizationRebuild" Member="Organization" ThisKey="OrganizationId" OtherKey="OrganizationId" Type="Organization" IsForeignKey="true" />
+      <Association Name="Rebuild_OrganizationRebuild" Member="Rebuild" ThisKey="RebuildId" OtherKey="RebuildId" Type="Rebuild" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrganizationSkill" Member="OrganizationSkills">
+    <Type Name="OrganizationSkill">
+      <Column Name="OrganizationSkillId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OrganizationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="SkillId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="Skill_OrganizationSkill" Member="Skill" ThisKey="SkillId" OtherKey="SkillId" Type="Skill" IsForeignKey="true" />
+      <Association Name="Organization_OrganizationSkill" Member="Organization" ThisKey="OrganizationId" OtherKey="OrganizationId" Type="Organization" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Photo" Member="Photos">
+    <Type Name="Photo">
+      <Column Name="PhotoId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Filename" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Hidden" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="Photo_SurveyPhoto" Member="SurveyPhotos" ThisKey="PhotoId" OtherKey="PhotoId" Type="SurveyPhoto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Porchlight" Member="Porchlights">
+    <Type Name="Porchlight">
+      <Column Name="PorchlightId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="TurnedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TurnedOff" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="latitude" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="longitude" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="aspnet_User_Porchlight" Member="aspnet_User" ThisKey="UserId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProfessionalService" Member="ProfessionalServices">
+    <Type Name="ProfessionalService">
+      <Column Name="ProfessionalServiceId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="ProfessionalService_ProfessionalServiceSkill" Member="ProfessionalServiceSkills" ThisKey="ProfessionalServiceId" OtherKey="ProfessionalServiceId" Type="ProfessionalServiceSkill" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProfessionalServiceSkill" Member="ProfessionalServiceSkills">
+    <Type Name="ProfessionalServiceSkill">
+      <Column Name="ProfessionalServiceSkillId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProfessionalServiceId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="SkillId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="ProfessionalService_ProfessionalServiceSkill" Member="ProfessionalService" ThisKey="ProfessionalServiceId" OtherKey="ProfessionalServiceId" Type="ProfessionalService" IsForeignKey="true" />
+      <Association Name="Skill_ProfessionalServiceSkill" Member="Skill" ThisKey="SkillId" OtherKey="SkillId" Type="Skill" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RebuildPost" Member="RebuildPosts">
+    <Type Name="RebuildPost">
+      <Column Name="RebuildPostId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RebuildId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Post" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_User_RebuildPost" Member="aspnet_User" ThisKey="UserId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+      <Association Name="Rebuild_RebuildPost" Member="Rebuild" ThisKey="RebuildId" OtherKey="RebuildId" Type="Rebuild" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RebuildSliderTick" Member="RebuildSliderTicks">
+    <Type Name="RebuildSliderTick">
+      <Column Name="RebuildSliderTickId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SliderId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="SliderTickId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="RebuildId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_User_RebuildSliderTick" Member="aspnet_User" ThisKey="CreatedBy" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+      <Association Name="Slider_RebuildSliderTick" Member="Slider" ThisKey="SliderId" OtherKey="SliderId" Type="Slider" IsForeignKey="true" />
+      <Association Name="SliderTick_RebuildSliderTick" Member="SliderTick" ThisKey="SliderTickId" OtherKey="SliderTickId" Type="SliderTick" IsForeignKey="true" />
+      <Association Name="Rebuild_RebuildSliderTick" Member="Rebuild" ThisKey="RebuildId" OtherKey="RebuildId" Type="Rebuild" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Skill" Member="Skills">
+    <Type Name="Skill">
+      <Column Name="SkillId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="Skill_OrganizationSkill" Member="OrganizationSkills" ThisKey="SkillId" OtherKey="SkillId" Type="OrganizationSkill" />
+      <Association Name="Skill_ProfessionalServiceSkill" Member="ProfessionalServiceSkills" ThisKey="SkillId" OtherKey="SkillId" Type="ProfessionalServiceSkill" />
+      <Association Name="Skill_TaskSkill" Member="TaskSkills" ThisKey="SkillId" OtherKey="SkillId" Type="TaskSkill" />
+      <Association Name="Skill_UserSkill" Member="UserSkills" ThisKey="SkillId" OtherKey="SkillId" Type="UserSkill" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Slider" Member="Sliders">
+    <Type Name="Slider">
+      <Column Name="SliderId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="Type" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UsageCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Orientation" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="Slider_RebuildSliderTick" Member="RebuildSliderTicks" ThisKey="SliderId" OtherKey="SliderId" Type="RebuildSliderTick" />
+      <Association Name="Slider_SliderTick" Member="SliderTicks" ThisKey="SliderId" OtherKey="SliderId" Type="SliderTick" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SliderTick" Member="SliderTicks">
+    <Type Name="SliderTick">
+      <Column Name="SliderTickId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SliderId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Tick" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Lable" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="SliderTick_RebuildSliderTick" Member="RebuildSliderTicks" ThisKey="SliderTickId" OtherKey="SliderTickId" Type="RebuildSliderTick" />
+      <Association Name="SliderTick_UserSliderTick" Member="UserSliderTicks" ThisKey="SliderTickId" OtherKey="SliderTickId" Type="UserSliderTick" />
+      <Association Name="Slider_SliderTick" Member="Slider" ThisKey="SliderId" OtherKey="SliderId" Type="Slider" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SurveyCaseWorker" Member="SurveyCaseWorkers">
+    <Type Name="SurveyCaseWorker">
+      <Column Name="SurveyCaseWorkerId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SurveyId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="IsPrimary" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_User_SurveyCaseWorker" Member="aspnet_User" ThisKey="UserId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SurveyPhoto" Member="SurveyPhotos">
+    <Type Name="SurveyPhoto">
+      <Column Name="SurveyPhotoId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SurveyId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PhotoId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UseInCampaign" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PrimaryCampaignImage" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Hidden" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="BasicNeedsSurvey_SurveyPhoto" Member="BasicNeedsSurvey" ThisKey="SurveyId" OtherKey="SurveyId" Type="BasicNeedsSurvey" IsForeignKey="true" />
+      <Association Name="Photo_SurveyPhoto" Member="Photo" ThisKey="PhotoId" OtherKey="PhotoId" Type="Photo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SurveyTimesheet" Member="SurveyTimesheets">
+    <Type Name="SurveyTimesheet">
+      <Column Name="SurveyTimesheetId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SurveyId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="TimesheetId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="BasicNeedsSurvey_SurveyTimesheet" Member="BasicNeedsSurvey" ThisKey="SurveyId" OtherKey="SurveyId" Type="BasicNeedsSurvey" IsForeignKey="true" />
+      <Association Name="Timesheet_SurveyTimesheet" Member="Timesheet" ThisKey="TimesheetId" OtherKey="TimesheetId" Type="Timesheet" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SurveyVideo" Member="SurveyVideos">
+    <Type Name="SurveyVideo">
+      <Column Name="SurveyVideoId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="VideoId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="SurveyId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="Video_SurveyVideo" Member="Video" ThisKey="VideoId" OtherKey="VideoId" Type="Video" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Task" Member="Tasks">
+    <Type Name="Task">
+      <Column Name="TaskId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(2500) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedByUserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="TaskStatusId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="Task_HelpTask" Member="HelpTasks" ThisKey="TaskId" OtherKey="TaskId" Type="HelpTask" />
+      <Association Name="Task_TaskSkill" Member="TaskSkills" ThisKey="TaskId" OtherKey="TaskId" Type="TaskSkill" />
+      <Association Name="Task_UserTask" Member="UserTasks" ThisKey="TaskId" OtherKey="TaskId" Type="UserTask" />
+      <Association Name="TaskStatus_Task" Member="TaskStatus" ThisKey="TaskStatusId" OtherKey="TaskStatusId" Type="TaskStatus" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TaskSkill" Member="TaskSkills">
+    <Type Name="TaskSkill">
+      <Column Name="TaskSkillId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TaskId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="SkillId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="Skill_TaskSkill" Member="Skill" ThisKey="SkillId" OtherKey="SkillId" Type="Skill" IsForeignKey="true" />
+      <Association Name="Task_TaskSkill" Member="Task" ThisKey="TaskId" OtherKey="TaskId" Type="Task" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TaskStatus" Member="TaskStatus">
+    <Type Name="TaskStatus">
+      <Column Name="TaskStatusId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="TaskStatus_Task" Member="Tasks" ThisKey="TaskStatusId" OtherKey="TaskStatusId" Type="Task" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TaskType" Member="TaskTypes">
+    <Type Name="TaskType">
+      <Column Name="TaskTypeId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="TaskType_Timesheet" Member="Timesheets" ThisKey="TaskTypeId" OtherKey="TaskTypeId" Type="Timesheet" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Timesheet" Member="Timesheets">
+    <Type Name="Timesheet">
+      <Column Name="TimesheetId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="OrganizationId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="TimeIn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TimeOut" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TaskTypeId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Error" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EditedBy" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="Timesheet_SurveyTimesheet" Member="SurveyTimesheets" ThisKey="TimesheetId" OtherKey="TimesheetId" Type="SurveyTimesheet" />
+      <Association Name="aspnet_User_Timesheet" Member="aspnet_User" ThisKey="UserId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+      <Association Name="TaskType_Timesheet" Member="TaskType" ThisKey="TaskTypeId" OtherKey="TaskTypeId" Type="TaskType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserEvent" Member="UserEvents">
+    <Type Name="UserEvent">
+      <Column Name="UserEventId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="EventId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_User_UserEvent" Member="aspnet_User" ThisKey="UserId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+      <Association Name="Event_UserEvent" Member="Event" ThisKey="EventId" OtherKey="EventId" Type="Event" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserInteractionType" Member="UserInteractionTypes">
+    <Type Name="UserInteractionType">
+      <Column Name="UserInteractionTypeId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="InteractionTypeId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_User_UserInteractionType" Member="aspnet_User" ThisKey="UserId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+      <Association Name="InteractionType_UserInteractionType" Member="InteractionType" ThisKey="InteractionTypeId" OtherKey="InteractionTypeId" Type="InteractionType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserSkill" Member="UserSkills">
+    <Type Name="UserSkill">
+      <Column Name="UserSkillId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="SkillId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_User_UserSkill" Member="aspnet_User" ThisKey="UserId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+      <Association Name="Skill_UserSkill" Member="Skill" ThisKey="SkillId" OtherKey="SkillId" Type="Skill" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserSliderTick" Member="UserSliderTicks">
+    <Type Name="UserSliderTick">
+      <Column Name="UserSliderTickId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SliderId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="SliderTickId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_User_UserSliderTick" Member="aspnet_User" ThisKey="UserId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+      <Association Name="SliderTick_UserSliderTick" Member="SliderTick" ThisKey="SliderTickId" OtherKey="SliderTickId" Type="SliderTick" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserTask" Member="UserTasks">
+    <Type Name="UserTask">
+      <Column Name="UserTaskId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="TaskId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_User_UserTask" Member="aspnet_User" ThisKey="UserId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+      <Association Name="Task_UserTask" Member="Task" ThisKey="TaskId" OtherKey="TaskId" Type="Task" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RebuildRebuildStatus" Member="RebuildRebuildStatus">
+    <Type Name="RebuildRebuildStatus">
+      <Column Name="RebuildRebuildStatusId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RebuildStatusId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="RebuildId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="RebuildStatus_RebuildRebuildStatus" Member="RebuildStatus" ThisKey="RebuildStatusId" OtherKey="RebuildStatusId" Type="RebuildStatus" IsForeignKey="true" />
+      <Association Name="Rebuild_RebuildRebuildStatus" Member="Rebuild" ThisKey="RebuildId" OtherKey="RebuildId" Type="Rebuild" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RebuildSurvey" Member="RebuildSurveys">
+    <Type Name="RebuildSurvey">
+      <Column Name="RebuildSurveyId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AddressId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="SurveyNumber" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NumberOfPeopleAffected" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Bedrooms" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Bathrooms" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UpdatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdatedBy" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="SquareFeet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Address_RebuildSurvey" Member="Address" ThisKey="AddressId" OtherKey="AddressId" Type="Address" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrganizationOrganization" Member="OrganizationOrganizations">
+    <Type Name="OrganizationOrganization">
+      <Column Name="OrganizationOrganizationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OrganizationId1" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="OrganizationId2" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="RequestedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="AcceptedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsValid" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Organization_OrganizationOrganization" Member="Organization" ThisKey="OrganizationId1" OtherKey="OrganizationId" Type="Organization" IsForeignKey="true" />
+      <Association Name="Organization_OrganizationOrganization1" Member="Organization1" ThisKey="OrganizationId2" OtherKey="OrganizationId" Type="Organization" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Organization" Member="Organizations">
+    <Type Name="Organization">
+      <Column Name="OrganizationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Zip" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PrimaryPhone" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="SecondaryPhone" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ParentOrganizationId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Logo" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="FacebookURL" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="TwitterURL" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="InstagramURL" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="YouTubeURL" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="[501c3Status]" Member="_501c3Status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Organization_BasicNeedsSurvey" Member="BasicNeedsSurveys" ThisKey="OrganizationId" OtherKey="OrganizationId" Type="BasicNeedsSurvey" />
+      <Association Name="Organization_OrganizationEvent" Member="OrganizationEvents" ThisKey="OrganizationId" OtherKey="OrganizationId" Type="OrganizationEvent" />
+      <Association Name="Organization_OrganizationRebuild" Member="OrganizationRebuilds" ThisKey="OrganizationId" OtherKey="OrganizationId" Type="OrganizationRebuild" />
+      <Association Name="Organization_OrganizationSkill" Member="OrganizationSkills" ThisKey="OrganizationId" OtherKey="OrganizationId" Type="OrganizationSkill" />
+      <Association Name="Organization_OrganizationOrganization" Member="OrganizationOrganizations" ThisKey="OrganizationId" OtherKey="OrganizationId1" Type="OrganizationOrganization" />
+      <Association Name="Organization_OrganizationOrganization1" Member="OrganizationOrganizations1" ThisKey="OrganizationId" OtherKey="OrganizationId2" Type="OrganizationOrganization" />
+      <Association Name="Organization_UserOrganization" Member="UserOrganizations" ThisKey="OrganizationId" OtherKey="OrganizationId" Type="UserOrganization" />
+      <Association Name="aspnet_User_Organization" Member="aspnet_User" ThisKey="CreatedBy" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Profile" Member="Profiles">
+    <Type Name="Profile">
+      <Column Name="ProfileId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProfileNumber" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Firstname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Lastname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Zip" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ContactMethod" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="VolunteerReliefMoniker" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DatesAvailable" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="NumberOfDaysAvailable" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="PreviousVolunteerExperience" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Age" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Photo" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Association Name="aspnet_User_Profile" Member="aspnet_User" ThisKey="UserId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RebuildStatus" Member="RebuildStatus">
+    <Type Name="RebuildStatus">
+      <Column Name="RebuildStatusId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="OrderBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StatusType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="RebuildStatus_RebuildRebuildStatus" Member="RebuildRebuildStatus" ThisKey="RebuildStatusId" OtherKey="RebuildStatusId" Type="RebuildRebuildStatus" />
+      <Association Name="RebuildStatus_RebuildQualifier" Member="RebuildQualifiers" ThisKey="RebuildStatusId" OtherKey="QualifierId" Type="RebuildQualifier" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RebuildQualifier" Member="RebuildQualifiers">
+    <Type Name="RebuildQualifier">
+      <Column Name="RebuildQualifiersId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RebuildId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="QualifierId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="RebuildStatus_RebuildQualifier" Member="RebuildStatus" ThisKey="QualifierId" OtherKey="RebuildStatusId" Type="RebuildStatus" IsForeignKey="true" />
+      <Association Name="Rebuild_RebuildQualifier" Member="Rebuild" ThisKey="RebuildId" OtherKey="RebuildId" Type="Rebuild" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Rebuild" Member="Rebuilds">
+    <Type Name="Rebuild">
+      <Column Name="RebuildId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SurvivorId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="RebuildAddressId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="RebuildDescription" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="RebuildStartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RebuildCompleteDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UpdatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UpdatedBy" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="IsOnHold" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsHidden" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Difficulty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Rebuild_OrganizationRebuild" Member="OrganizationRebuilds" ThisKey="RebuildId" OtherKey="RebuildId" Type="OrganizationRebuild" />
+      <Association Name="Rebuild_RebuildPost" Member="RebuildPosts" ThisKey="RebuildId" OtherKey="RebuildId" Type="RebuildPost" />
+      <Association Name="Rebuild_RebuildSliderTick" Member="RebuildSliderTicks" ThisKey="RebuildId" OtherKey="RebuildId" Type="RebuildSliderTick" />
+      <Association Name="Rebuild_RebuildRebuildStatus" Member="RebuildRebuildStatus" ThisKey="RebuildId" OtherKey="RebuildId" Type="RebuildRebuildStatus" />
+      <Association Name="Rebuild_RebuildQualifier" Member="RebuildQualifiers" ThisKey="RebuildId" OtherKey="RebuildId" Type="RebuildQualifier" />
+      <Association Name="aspnet_User_Rebuild" Member="aspnet_User" ThisKey="CreatedBy" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+      <Association Name="aspnet_User_Rebuild1" Member="aspnet_User1" ThisKey="UpdatedBy" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+      <Association Name="aspnet_User_Rebuild2" Member="aspnet_User2" ThisKey="SurvivorId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserOrganization" Member="UserOrganizations">
+    <Type Name="UserOrganization">
+      <Column Name="UserOrganizationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="OrganizationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="IsPrimary" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="aspnet_User_UserOrganization" Member="aspnet_User" ThisKey="UserId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+      <Association Name="Organization_UserOrganization" Member="Organization" ThisKey="OrganizationId" OtherKey="OrganizationId" Type="Organization" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

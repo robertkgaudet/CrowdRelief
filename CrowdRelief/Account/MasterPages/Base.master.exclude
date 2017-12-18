@@ -1,0 +1,23 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Base.master.cs" Inherits="Account_MasterPages_Page" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	
+    <asp:ContentPlaceHolder id="HeadContentPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body class="light-skin fixed-navbar sidebar-scroll">
+    <form id="form1" runat="server">
+		<!--[if lt IE 7]>
+		<p class="alert alert-danger">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+
+		<!-- Main Wrapper -->
+		<asp:ContentPlaceHolder id="BodyContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+</form>
+</body>
+</html>

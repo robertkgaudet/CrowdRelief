@@ -1,0 +1,142 @@
+﻿body
+{font: 18px Raleway, sans-serif; background-color:#EFEFEF; padding-top:75px; }
+
+a {color:blue;}
+p {font-size: 16px;}
+
+.margin {margin-bottom: 45px;}
+.btn-1 {}
+.margin-top-50 {margin:50px;}
+.img-1 {margin: 0 auto; padding-left: 50px; padding-right:50px; margin-top:50px;}
+.img-2 {margin: 0 auto; padding-left: 50px; padding-right:50px}
+
+.row-1
+{margin-top:0px;}
+
+.bg-1 { 
+	background-color: #F9FAF5; /* White */
+	color: #555555;
+}
+.bg-2 { 
+	background-color: #87BD31; /* Dark Blue */
+	color: #ffffff;
+	padding-top:75px;
+	padding-bottom:75px;
+}
+.bg-3 { 
+	background-color: #F9FAF5; /* White */
+	color: #555555;
+}
+.bg-4 { 
+	background-color: #2f2f2f; /* Black Gray */
+	color: #fff;
+}
+.bg-5 { 
+	background-color: #ffffff; /* White */
+	color: #555555;
+	border:solid 1px #555555;
+	padding:10px;
+	margin:10px;
+}
+.bg-6 { 
+	background-color: #2f2f2f; /* Black Gray */
+	color: #fff;
+	padding:75px;
+	margin-top:400px;
+}
+.bg-small-footer{
+	background-color: #2f2f2f; /* Black Gray */
+	color: #fff;
+	padding:5px;
+}
+.container-fluid {
+}
+.container-fluid-1 {
+}
+.container-fluid-2 {
+	border-top:solid 1px #D2D2D2;
+}
+.navbar {
+	padding: 5px 0px;
+	border: 0;
+	border-radius: 0;
+	font-size: 14px;
+	background-color:white;
+
+
+	-webkit-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
+	box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
+}
+.navbar-nav li a:hover {
+	color: red !important;
+}
+
+.navbar-right
+{
+	margin:0px;
+}
+
+.divRegisterFormOuter {
+     padding: 30px;
+     text-align: center;
+	 margin-bottom:500px;
+}
+
+.divRegisterForm{
+    padding:20px;
+    display:inline-block;
+    border:solid 1px #ccc;
+    margin-top:40px;
+    background-color:#F8F8F8;
+    text-align:left;
+	color: #5E5E5E;
+}
+
+.ButtonRegister{
+    padding:10px 30px;
+    font-size:16px;
+    font-weight:bold;
+}
+
+.help-1
+{
+	margin-top:100px;
+}
+
+.structureSurvey-1
+{
+	margin-top:100px;
+	margin-bottom:250px;
+}
+
+.registerFormTextBox{
+    padding:5px;
+    width:300px;
+}
+
+.registerFormTextBoxMedium{
+    width:80px;
+}
+
+.registerFormTextBoxSmall{
+    width:50px;
+}
+.OpenNeedAmt
+{
+	font-family: 'Passion One', cursive;
+	font-weight:bold;
+	font-size:50px;
+}
+.CampaignTitleMasonry
+{
+	font-family: 'Passion One', cursive;
+	font-size:20px;
+	color:black;
+}
+.CampaignDescriptionMasonry
+{
+	display:block;
+	padding-top:20px;
+	color:black;
+}

@@ -1,0 +1,1031 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 22.75, 89" name="CrowdReliefDB">
+  <DataContextMoniker Name="/CrowdReliefDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="80db1481-b568-4cef-a37f-b77de8673f45" absoluteBounds="12.25, 60.5, 2, 3.3093082682291595">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/Address" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eeb44f4f-b064-46f1-bf52-3b2871cfbefd" absoluteBounds="12.265, 60.96, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="00a48f4f-b1db-47d0-9462-26c442560e31" absoluteBounds="6.25, 40.875, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/Video" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c7083ce5-ffde-4b30-accc-1fe1ef129817" absoluteBounds="6.265, 41.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3ca9abff-70c1-47c8-90b9-9451d61245b9" absoluteBounds="0.75, 46.875, 2, 1.5785953776041595">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/aspnet_Application" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cd71dd79-e330-4cdf-9984-4bfc8d407f1b" absoluteBounds="0.765, 47.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7d0274ff-435d-4dd4-9ec3-4d13ae20504f" absoluteBounds="15.25, 46.625, 2, 4.8477197265625023">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/aspnet_Membership" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5d7f9e9f-e90c-4e84-bdfa-ac4f0fbc20f8" absoluteBounds="15.265, 47.085, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7cb556a9-f883-484e-b570-dd5589a5ca44" absoluteBounds="3.5, 27.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/aspnet_Path" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ccd27671-010f-4180-815e-c0a14f09da62" absoluteBounds="3.515, 27.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="74e7168a-3796-4634-b930-e86fd666974c" absoluteBounds="6.25, 27.375, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/aspnet_PersonalizationAllUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="77d72156-85f4-4ffc-9ebb-a732a52d958e" absoluteBounds="6.265, 27.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="644438bb-67cf-4206-85a3-75b677458ff7" absoluteBounds="6.25, 35.375, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/aspnet_PersonalizationPerUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd61ffc6-d497-48c9-b6b8-65eac7888c87" absoluteBounds="6.265, 35.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d6b62396-0cc2-44bf-bf5b-ad964d0b5e4e" absoluteBounds="6.25, 43.375, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/aspnet_Profile" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b423191b-e29d-4a46-9841-2119b028008b" absoluteBounds="6.265, 43.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="610d8e3f-bd58-4a59-9fb8-a4494b19a86d" absoluteBounds="3.5, 29.625, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/aspnet_Role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d080a565-3463-4a42-bdb4-6208bc777f12" absoluteBounds="3.515, 30.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d967d1b8-ed85-4551-88a4-031b7f2ffadd" absoluteBounds="0.75, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/aspnet_SchemaVersion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="86599222-8fd0-45b5-a005-e347ab702302" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="964b397a-e066-49cc-b68d-68d9c6deaab1" absoluteBounds="3.5, 49.125, 2, 2.1554996744791595">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/aspnet_User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1fcf19b1-b44a-4c86-aaf8-539c09772071" absoluteBounds="3.515, 49.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="38274655-3767-48c8-87d7-9e4e9e770831" absoluteBounds="9.25, 38.875, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/aspnet_UsersInRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f868a403-8aa7-43f2-bdbc-0255d8fc569a" absoluteBounds="9.265, 39.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fbd2a3a2-5d32-4c65-a4e3-a30b20f58097" absoluteBounds="3.75, 0.75, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/aspnet_WebEvent_Event" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8ae49383-c556-4a15-8284-8e96ce25640a" absoluteBounds="3.765, 1.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e71eaa3c-a0a5-4ac3-ba50-4c9ed02ceebe" absoluteBounds="17.75, 68.875, 2, 2.9247054036458451">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/BasicNeedsCampaign" />
+      <nestedChildShapes>
+        <elementListCompartment Id="84e4259a-0425-4302-947e-d9656549bb87" absoluteBounds="17.765, 69.335, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3866d2a0-97f7-481d-9432-8e4027b26266" absoluteBounds="12.25, 42.625, 2, 2.9247054036458309">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/BasicNeedsCaseNote" />
+      <nestedChildShapes>
+        <elementListCompartment Id="955e7b99-9aa9-4c68-a311-4efb27782af0" absoluteBounds="12.265, 43.085, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cbf93c64-dd30-45df-a1d9-5a97b9e0d225" absoluteBounds="9.5, 36.375, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/BasicNeedsStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="27ace642-c73a-4349-9593-4cf3a474260e" absoluteBounds="9.515, 36.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5d00f7c6-8745-4720-8847-4786c31153b8" absoluteBounds="15, 60, 2, 6.3861311848958309">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/BasicNeedsSurvey" />
+      <nestedChildShapes>
+        <elementListCompartment Id="357b243a-7de9-4fa7-a783-5d79a3fb7f08" absoluteBounds="15.015, 60.46, 1.9700000000000002, 5.826131184895833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="77dd4f4f-653d-4c65-acfb-d9f2c199d421" absoluteBounds="17.75, 62.375, 2, 1.5785953776041737">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/BasicNeedsSurveyItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="46147482-66fe-484d-9863-0db7cb455d74" absoluteBounds="17.765, 62.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7cbe26a6-b365-4871-80d3-17d423a52a5b" absoluteBounds="6.25, 65.25, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/DisasterStage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="54e4ce56-c159-47b3-9554-776df0669cf4" absoluteBounds="6.265, 65.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6e0c4c22-2ad0-4543-87ef-c86b3d26038f" absoluteBounds="20.5, 65, 2, 4.0785139973958451">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/Donation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="072c885b-114b-44bd-a49d-8563b060f2f9" absoluteBounds="20.515, 65.46, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a4b60b56-1017-4ec1-923f-10f75ac89902" absoluteBounds="6.25, 57.5, 2, 2.7324039713541595">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/Event" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d0b2945b-3e6c-441f-a448-58f247357770" absoluteBounds="6.265, 57.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="114aa649-5dda-4fe4-9b2c-a55720b1b178" absoluteBounds="9, 60.25, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/EventDisasterStage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="da292c3f-cce5-433b-a6ef-397e87b633bb" absoluteBounds="9.015, 60.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8337933a-f101-4d7b-9c99-7cdb48947aa7" absoluteBounds="6.25, 51.375, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/Help" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ee317d57-6597-4189-9fef-35d7fdb052fb" absoluteBounds="6.265, 51.835, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c1559315-26e9-441e-84b4-e9358e1adb10" absoluteBounds="12, 50.5, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/HelpHelpStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ee3fb1f5-6ee2-4dbd-9b53-e6308847e44a" absoluteBounds="12.015, 50.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="899f363a-f695-43bc-8bf8-2c0988aa476d" absoluteBounds="9.25, 69.75, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/HelpStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="adf5c82c-4682-473f-9735-5e965bd3780f" absoluteBounds="9.265, 70.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0b0d2af2-0762-4dca-a6e6-45634ccfa649" absoluteBounds="9, 54.875, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/HelpTask" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fe95bd4c-f555-4723-8ae4-2283b462b7a7" absoluteBounds="9.015, 55.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="808f7fa1-0168-441c-9cd0-3aeb9a8116a6" absoluteBounds="6.5, 21.5, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/InteractionType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="45b1b2cd-921d-4eb3-907e-7e47a0560457" absoluteBounds="6.515, 21.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="258c79c5-d1ee-43e1-86fe-c183685c5160" absoluteBounds="15, 68.25, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/Item" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bd953126-947a-41fe-8c74-d510c78721a4" absoluteBounds="15.015, 68.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9d6c193c-b176-4432-94e1-ae99e52084ab" absoluteBounds="12.25, 67.625, 2, 1.1939925130208451">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/ItemSubType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4a73a53f-ee74-43a5-8fc3-233ef8ba13b2" absoluteBounds="12.265, 68.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="968a1fd5-14b1-4f3d-8c65-25b590ff828b" absoluteBounds="12.25, 69.5, 2, 1.1939925130208451">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/ItemType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="73de81e5-769d-4d47-90a6-5263ef3aa4bf" absoluteBounds="12.265, 69.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c0525201-68f8-4bab-8976-1033cffb869a" absoluteBounds="6.25, 78, 2, 6.1938297526041595">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/Member" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d2fda911-715e-496f-9bb2-c6ff9f717381" absoluteBounds="6.265, 78.46, 1.9700000000000002, 5.6338297526041661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b4124886-a636-43c0-8b2b-4ac6864318e5" absoluteBounds="9, 80.5, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/MemberSession" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4c0414bd-1560-49cc-9f6d-89dcef87d6e4" absoluteBounds="9.015, 80.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b1d5a2f9-4afe-4e5d-a630-42e950f39e47" absoluteBounds="9, 66.75, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/OrganizationEvent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fcdaf9da-4b66-406a-bef8-c5497c55c159" absoluteBounds="9.015, 67.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="286d5e88-f9a4-46b6-ab64-3a7e8bfe9598" absoluteBounds="12, 65, 2, 1.7708968098958451">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/OrganizationRebuild" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8d85c9b7-d479-441d-ad0e-7a156b2f2e94" absoluteBounds="12.015, 65.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="48e8fb29-0437-4b74-a62b-7eb09079aa76" absoluteBounds="9, 74.375, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/OrganizationSkill" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0e6a5f81-67b1-4358-8a56-f46e2e39decb" absoluteBounds="9.015, 74.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="792ed609-2569-48dd-9350-ce6880fc2431" absoluteBounds="15, 56.125, 2, 2.1554996744791595">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/Photo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="231a5eca-6413-403f-a06e-2efb8e7570f6" absoluteBounds="15.015, 56.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1e3aaef2-c520-4c94-99ff-206103870b42" absoluteBounds="6.25, 48.5, 2, 2.1554996744791595">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/Porchlight" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4dd361b7-98b6-4d10-a53f-532763a1fcd5" absoluteBounds="6.265, 48.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d1179b10-659a-444b-a147-ba529172a82a" absoluteBounds="6.5, 18.25, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/ProfessionalService" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ee50546e-22c5-4bb5-89e0-48aab99b72d9" absoluteBounds="6.515, 18.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2cc71a80-1fce-4d45-9bdc-48f881fe744b" absoluteBounds="9.25, 24.5, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/ProfessionalServiceSkill" />
+      <nestedChildShapes>
+        <elementListCompartment Id="691cbf63-ae24-4b32-a638-ece342b0551f" absoluteBounds="9.265, 24.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f5d3c6ed-f2d9-4e06-87ef-d8d76e7163e5" absoluteBounds="12, 54, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/RebuildPost" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bb9ffbf8-77fb-4972-b612-43194ef362fc" absoluteBounds="12.015, 54.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b849ac0d-8a41-466f-ae5e-fa53530eadb4" absoluteBounds="9, 57, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/RebuildSliderTick" />
+      <nestedChildShapes>
+        <elementListCompartment Id="53588ee8-9228-477a-acd6-452957170d9f" absoluteBounds="9.015, 57.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7cbd121b-5aca-472d-aea1-7b30dfbf9e88" absoluteBounds="6.5, 24.5, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/Skill" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9280b25a-e97e-4696-9d78-46c286f33448" absoluteBounds="6.515, 24.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cf5ddcda-991e-4b6a-9d3f-5a31d9f19db3" absoluteBounds="3.75, 32.125, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/Slider" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cb9e2ab3-0515-49ec-b253-1d9927ea51d6" absoluteBounds="3.765, 32.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="64943815-b489-4ddb-babe-0384e1697756" absoluteBounds="6.5, 32.25, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/SliderTick" />
+      <nestedChildShapes>
+        <elementListCompartment Id="393905e2-d5e4-49c3-81af-d1067f4c7de2" absoluteBounds="6.515, 32.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7e4597b0-3a9c-4122-8256-26591775bc4a" absoluteBounds="6.25, 38.5, 2, 1.5785953776041595">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/SurveyCaseWorker" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3a87e79d-9e9d-4c99-b458-889d0bacc92f" absoluteBounds="6.265, 38.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4e76f027-9f74-465d-bbdd-1440131fefe3" absoluteBounds="17.75, 59.25, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/SurveyPhoto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="34305364-55c0-4b59-b420-209c93a8a970" absoluteBounds="17.765, 59.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fb3185c2-d399-4a2a-be62-a503c233eb96" absoluteBounds="17.75, 55.875, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/SurveyTimesheet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="18ebb6f3-aa23-4942-862c-b840be01082e" absoluteBounds="17.765, 56.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="93deb472-4221-4c63-86e2-e9213f8c1d0d" absoluteBounds="9, 41.125, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/SurveyVideo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9729c8cf-f5ce-4df2-ae83-4dd00837dd38" absoluteBounds="9.015, 41.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3e14f002-1dfe-4f23-8075-73fc3804d2f7" absoluteBounds="6.25, 61.5, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/Task" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c7875d4d-cf14-4557-bec1-756e217d5abf" absoluteBounds="6.265, 61.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="aeff280d-f5e3-494d-a90c-e389ebcb4a5a" absoluteBounds="12.25, 40.25, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/TaskSkill" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a871a044-300e-4b99-a629-886e876a2b31" absoluteBounds="12.265, 40.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7dc90ac4-4e45-4bbb-acf5-0dac04d83649" absoluteBounds="3.5, 61.875, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/TaskStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7cb1430d-af59-4439-aef9-89d8233dd3a7" absoluteBounds="3.515, 62.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2b0688f4-f5a0-47a2-97a5-ae77623eac6d" absoluteBounds="9.5, 33.5, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/TaskType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f0f6f608-d49e-4d95-9f07-2e231824ee5f" absoluteBounds="9.515, 33.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="737c2478-c07f-4ae9-89fa-b117b8e436ae" absoluteBounds="12.25, 46.75, 2, 2.7324039713541595">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/Timesheet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0b9e9b7c-fe90-4a21-bd74-d877feac30c9" absoluteBounds="12.265, 47.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="303747c2-6bdb-4ddd-b386-0f97e1a37019" absoluteBounds="12, 57, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/UserEvent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="94cdb886-cdf3-4070-afa1-152400178fcb" absoluteBounds="12.015, 57.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8710aa83-d521-423f-a575-956a8001084b" absoluteBounds="9.25, 49.5, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/UserInteractionType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c61cdf29-29d2-4d5e-80bb-acf18cba27e9" absoluteBounds="9.265, 49.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0509462e-25bc-43c9-a253-854aec59c1cb" absoluteBounds="9.25, 46.5, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/UserSkill" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e97f06e1-0b6d-4137-82d4-894e4de18803" absoluteBounds="9.265, 46.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="847ed9d3-17c3-4658-a948-9b02d6cbe59c" absoluteBounds="9.25, 43.25, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/UserSliderTick" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8190aeb5-8bd5-4530-826e-e9d569e4c485" absoluteBounds="9.265, 43.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f31d6915-70e2-4dc9-acfe-f6755d510ccf" absoluteBounds="9.25, 52.5, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/UserTask" />
+      <nestedChildShapes>
+        <elementListCompartment Id="65fd8627-1ac4-4f92-a935-cd08e1cccd44" absoluteBounds="9.265, 52.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 47.5907729085286); (3.61978866666667 : 47.5907729085286 : JumpStart); (3.78645533333333 : 47.5907729085286 : JumpEnd); (3.88541466666667 : 47.5907729085286 : JumpStart); (4.05208133333333 : 47.5907729085286 : JumpEnd); (4.15104066666667 : 47.5907729085286 : JumpStart); (4.31770733333333 : 47.5907729085286 : JumpEnd); (4.68229266666667 : 47.5907729085286 : JumpStart); (5.11458533333333 : 47.5907729085286 : JumpEnd); (5.21354466666667 : 47.5907729085286 : JumpStart); (5.38021133333333 : 47.5907729085286 : JumpEnd); (5.79166666666667 : 47.5907729085286 : JumpStart); (5.95833333333333 : 47.5907729085286 : JumpEnd); (6.04166666666667 : 47.5907729085286 : JumpStart); (6.20833333333333 : 47.5907729085286 : JumpEnd); (8.47916666666667 : 47.5907729085286 : JumpStart); (8.95833333333333 : 47.5907729085286 : JumpEnd); (9 : 47.5907729085286); (9 : 46.25); (9.16666666666667 : 46.25 : JumpStart); (9.41587074092331 : 46.25 : JumpEnd); (11.9479166666667 : 46.25 : JumpStart); (12.1145833333333 : 46.25 : JumpEnd); (14.5416666666667 : 46.25 : JumpStart); (14.8333333333333 : 46.25 : JumpEnd); (15.6041671666667 : 46.25 : JumpStart); (15.7708338333333 : 46.25 : JumpEnd); (16.25 : 46.25); (16.25 : 46.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_Application/aspnet_Application_aspnet_Membership" />
+      <nodes>
+        <classShapeMoniker Id="3ca9abff-70c1-47c8-90b9-9451d61245b9" />
+        <classShapeMoniker Id="7d0274ff-435d-4dd4-9ec3-4d13ae20504f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 46.875); (2.125 : 28.0392976888021); (3.875 : 28.0392976888021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_Application/aspnet_Application_aspnet_Path" />
+      <nodes>
+        <classShapeMoniker Id="3ca9abff-70c1-47c8-90b9-9451d61245b9" />
+        <classShapeMoniker Id="7cb556a9-f883-484e-b570-dd5589a5ca44" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 28.0681469726563); (5.91666666666667 : 28.0681469726563 : JumpStart); (6.20833333333333 : 28.0681469726563 : JumpEnd); (6.25 : 28.0681469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_Path/aspnet_Path_aspnet_PersonalizationAllUser" />
+      <nodes>
+        <classShapeMoniker Id="7cb556a9-f883-484e-b570-dd5589a5ca44" />
+        <classShapeMoniker Id="74e7168a-3796-4634-b930-e86fd666974c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 27.6278214863281); (6 : 27.6278214863281); (6 : 35); (6.04166666666667 : 35 : JumpStart); (6.20833333333333 : 35 : JumpEnd); (7.25 : 35); (7.25 : 35.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_Path/aspnet_Path_aspnet_PersonalizationPerUser" />
+      <nodes>
+        <classShapeMoniker Id="7cb556a9-f883-484e-b570-dd5589a5ca44" />
+        <classShapeMoniker Id="644438bb-67cf-4206-85a3-75b677458ff7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 46.875); (2.2812525 : 30.5104484049479); (3.5 : 30.5104484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_Application/aspnet_Application_aspnet_Role" />
+      <nodes>
+        <classShapeMoniker Id="3ca9abff-70c1-47c8-90b9-9451d61245b9" />
+        <classShapeMoniker Id="610d8e3f-bd58-4a59-9fb8-a4494b19a86d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.765626 : 49.125); (4.765626 : 41.7604484049479); (4.94791866666667 : 41.7604484049479 : JumpStart); (5.11458533333333 : 41.7604484049479 : JumpEnd); (5.79166666666667 : 41.7604484049479 : JumpStart); (5.95833333333333 : 41.7604484049479 : JumpEnd); (6.04166666666667 : 41.7604484049479 : JumpStart); (6.20833333333333 : 41.7604484049479 : JumpEnd); (6.25 : 41.7604484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_User/aspnet_User_Video" />
+      <nodes>
+        <classShapeMoniker Id="964b397a-e066-49cc-b68d-68d9c6deaab1" />
+        <classShapeMoniker Id="00a48f4f-b1db-47d0-9462-26c442560e31" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.30615384615385 : 49.125); (4.71245357693464 : 48.6347046344037 : JumpStart); (4.88587209695702 : 48.4254347525061 : JumpEnd); (5.031252 : 48.25); (5.21354466666667 : 48.25 : JumpStart); (5.38021133333333 : 48.25 : JumpEnd); (5.79166666666667 : 48.25 : JumpStart); (5.95833333333333 : 48.25 : JumpEnd); (6.04166666666667 : 48.25 : JumpStart); (6.20833333333333 : 48.25 : JumpEnd); (8.47916666666667 : 48.25 : JumpStart); (9.05602442095579 : 48.25 : JumpEnd); (9.16666666666667 : 48.25 : JumpStart); (9.45744837439494 : 48.25 : JumpEnd); (12 : 48.25); (12 : 49.0488598632813); (14.5416666666667 : 49.0488598632813 : JumpStart); (14.9583333333333 : 49.0488598632813 : JumpEnd); (15.25 : 49.0488598632813)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_User/aspnet_User_aspnet_Membership" />
+      <nodes>
+        <classShapeMoniker Id="964b397a-e066-49cc-b68d-68d9c6deaab1" />
+        <classShapeMoniker Id="7d0274ff-435d-4dd4-9ec3-4d13ae20504f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.703122 : 49.125); (3.703122 : 36.2604484049479); (6.04166666666667 : 36.2604484049479 : JumpStart); (6.20833333333333 : 36.2604484049479 : JumpEnd); (6.25 : 36.2604484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_User/aspnet_User_aspnet_PersonalizationPerUser" />
+      <nodes>
+        <classShapeMoniker Id="964b397a-e066-49cc-b68d-68d9c6deaab1" />
+        <classShapeMoniker Id="644438bb-67cf-4206-85a3-75b677458ff7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.234374 : 49.125); (4.234374 : 44.2604484049479); (4.68229266666667 : 44.2604484049479 : JumpStart); (4.84895933333333 : 44.2604484049479 : JumpEnd); (4.94791866666667 : 44.2604484049479 : JumpStart); (5.11458533333333 : 44.2604484049479 : JumpEnd); (5.12060893927109 : 44.2604484049479 : JumpStart); (5.38021133333333 : 44.2604484049479 : JumpEnd); (5.79166666666667 : 44.2604484049479 : JumpStart); (5.95833333333333 : 44.2604484049479 : JumpEnd); (6.04166666666667 : 44.2604484049479 : JumpStart); (6.20833333333333 : 44.2604484049479 : JumpEnd); (6.25 : 44.2604484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_User/aspnet_User_aspnet_Profile" />
+      <nodes>
+        <classShapeMoniker Id="964b397a-e066-49cc-b68d-68d9c6deaab1" />
+        <classShapeMoniker Id="d6b62396-0cc2-44bf-bf5b-ad964d0b5e4e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.125 : 48.4535953776042); (1.75 : 50.2027498372396); (3.5 : 50.2027498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_Application/aspnet_Application_aspnet_User" />
+      <nodes>
+        <classShapeMoniker Id="3ca9abff-70c1-47c8-90b9-9451d61245b9" />
+        <classShapeMoniker Id="964b397a-e066-49cc-b68d-68d9c6deaab1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 30.5104484049479); (5.91666666666667 : 30.5104484049479 : JumpStart); (6.20833333333333 : 30.5104484049479 : JumpEnd); (8.60416666666667 : 30.5104484049479 : JumpStart); (9.02083333333333 : 30.5104484049479 : JumpEnd); (9.34375 : 30.5104484049479); (9.34375 : 38.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_Role/aspnet_Role_aspnet_UsersInRole" />
+      <nodes>
+        <classShapeMoniker Id="610d8e3f-bd58-4a59-9fb8-a4494b19a86d" />
+        <classShapeMoniker Id="38274655-3767-48c8-87d7-9e4e9e770831" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 49.125); (5.875 : 49.125); (5.875 : 40.4439925130208); (6.04166666666667 : 40.4439925130208 : JumpStart); (6.20833333333333 : 40.4439925130208 : JumpEnd); (8.35416916666667 : 40.4439925130208 : JumpStart); (8.52083583333333 : 40.4439925130208 : JumpEnd); (8.60416666666667 : 40.4439925130208 : JumpStart); (8.83333333333333 : 40.4439925130208 : JumpEnd); (8.875 : 40.4439925130208); (8.87857443490112 : 40.4404180781197 : JumpStart); (8.99642556509888 : 40.3225669479219 : JumpEnd); (9.24999999999997 : 40.0689925130208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_User/aspnet_User_aspnet_UsersInRole" />
+      <nodes>
+        <classShapeMoniker Id="964b397a-e066-49cc-b68d-68d9c6deaab1" />
+        <classShapeMoniker Id="38274655-3767-48c8-87d7-9e4e9e770831" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.296878 : 49.125); (5.296878 : 42.9479484049479); (5.79166666666667 : 42.9479484049479 : JumpStart); (5.95833333333333 : 42.9479484049479 : JumpEnd); (6.04166666666667 : 42.9479484049479 : JumpStart); (6.20833333333333 : 42.9479484049479 : JumpEnd); (8.35416916666667 : 42.9479484049479 : JumpStart); (9.02083333333333 : 42.9479484049479 : JumpEnd); (9.16666666666667 : 42.9479484049479 : JumpStart); (9.34722499546156 : 42.9479484049479 : JumpEnd); (11.3229166666667 : 42.9479484049479 : JumpStart); (11.4895833333333 : 42.9479484049479 : JumpEnd); (11.9479166666667 : 42.9479484049479 : JumpStart); (12.1145833333333 : 42.9479484049479 : JumpEnd); (12.25 : 42.9479484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_User/aspnet_User_BasicNeedsCaseNote" />
+      <nodes>
+        <classShapeMoniker Id="964b397a-e066-49cc-b68d-68d9c6deaab1" />
+        <classShapeMoniker Id="3866d2a0-97f7-481d-9432-8e4027b26266" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.40625 : 37.7612939453125); (11.40625 : 45.3165511067708); (11.9479166666667 : 45.3165511067708 : JumpStart); (12.1145833333333 : 45.3165511067708 : JumpEnd); (12.25 : 45.3165511067708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/BasicNeedsStatus/BasicNeedsStatus_BasicNeedsCaseNote" />
+      <nodes>
+        <classShapeMoniker Id="cbf93c64-dd30-45df-a1d9-5a97b9e0d225" />
+        <classShapeMoniker Id="3866d2a0-97f7-481d-9432-8e4027b26266" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17 : 66.3861311848958); (17.375 : 66.7611311848958); (17.375 : 70.3373527018229); (17.75 : 70.3373527018229)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/BasicNeedsSurvey/BasicNeedsSurvey_BasicNeedsCampaign" />
+      <nodes>
+        <classShapeMoniker Id="5d00f7c6-8745-4720-8847-4786c31153b8" />
+        <classShapeMoniker Id="e71eaa3c-a0a5-4ac3-ba50-4c9ed02ceebe" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.1523076923077 : 60); (15.5496776085556 : 59.852036179386 : JumpStart); (15.3878183914444 : 59.8122948707273 : JumpEnd); (14.9559296085556 : 59.7062531776232 : JumpStart); (14.6690703914444 : 59.6358206073176 : JumpEnd); (14.625 : 59.625); (14.625 : 44.0873527018229); (14.25 : 44.0873527018229)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/BasicNeedsSurvey/BasicNeedsSurvey_BasicNeedsCaseNote" />
+      <nodes>
+        <classShapeMoniker Id="5d00f7c6-8745-4720-8847-4786c31153b8" />
+        <classShapeMoniker Id="3866d2a0-97f7-481d-9432-8e4027b26266" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.25 : 62.1546541341146); (14.7916666666667 : 62.1546541341146 : JumpStart); (14.9583333333333 : 62.1546541341146 : JumpEnd); (15 : 62.1546541341146)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Address/Address_BasicNeedsSurvey" />
+      <nodes>
+        <classShapeMoniker Id="80db1481-b568-4cef-a37f-b77de8673f45" />
+        <classShapeMoniker Id="5d00f7c6-8745-4720-8847-4786c31153b8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 49.8868614282853); (5.75 : 51.3862939453125); (5.79166666666667 : 51.3862939453125 : JumpStart); (6.27083333333333 : 51.3862939453125 : JumpEnd); (8.47916666666667 : 51.3862939453125 : JumpStart); (9.02083333333333 : 51.3862939453125 : JumpEnd); (9.16666666666667 : 51.3862939453125 : JumpStart); (9.33333333333333 : 51.3862939453125 : JumpEnd); (9.35598154778702 : 51.3862939453125 : JumpStart); (9.52264821445369 : 51.3862939453125 : JumpEnd); (11.375 : 51.3862939453125); (11.375 : 59.625); (11.4479166666667 : 59.625 : JumpStart); (11.7708333333333 : 59.625 : JumpEnd); (13.2916666666667 : 59.625 : JumpStart); (13.4583333333333 : 59.625 : JumpEnd); (14.6666666666667 : 59.625 : JumpStart); (14.9583333333333 : 59.625 : JumpEnd); (15.468748 : 59.625); (15.468748 : 60)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_User/aspnet_User_BasicNeedsSurvey" />
+      <nodes>
+        <classShapeMoniker Id="964b397a-e066-49cc-b68d-68d9c6deaab1" />
+        <classShapeMoniker Id="5d00f7c6-8745-4720-8847-4786c31153b8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 51.100409522583); (5.6875 : 51.1362939453125); (5.72916666666667 : 51.1362939453125 : JumpStart); (6.27083333333333 : 51.1362939453125 : JumpEnd); (8.47916666666667 : 51.1362939453125 : JumpStart); (9.02083333333333 : 51.1362939453125 : JumpEnd); (9.16666666666667 : 51.1362939453125 : JumpStart); (9.33333333333333 : 51.1362939453125 : JumpEnd); (9.35078434360307 : 51.1362939453125 : JumpStart); (9.51745101026974 : 51.1362939453125 : JumpEnd); (11.8125 : 51.1362939453125); (11.8125 : 59.375); (13.2916666666667 : 59.375 : JumpStart); (13.4583333333333 : 59.375 : JumpEnd); (14.5416666666667 : 59.375 : JumpStart); (14.9583333333333 : 59.375 : JumpEnd); (16 : 59.375); (16 : 60)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_User/aspnet_User_BasicNeedsSurvey1" />
+      <nodes>
+        <classShapeMoniker Id="964b397a-e066-49cc-b68d-68d9c6deaab1" />
+        <classShapeMoniker Id="5d00f7c6-8745-4720-8847-4786c31153b8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.5569230769231 : 66.3861311848958); (15.5569230769231 : 66.6361311848958); (16 : 66.6361311848958); (16 : 66.3861311848958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/BasicNeedsSurvey/BasicNeedsSurvey_BasicNeedsSurvey" />
+      <nodes>
+        <classShapeMoniker Id="5d00f7c6-8745-4720-8847-4786c31153b8" />
+        <classShapeMoniker Id="5d00f7c6-8745-4720-8847-4786c31153b8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17 : 63.1642976888021); (17.75 : 63.1642976888021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/BasicNeedsSurvey/BasicNeedsSurvey_BasicNeedsSurveyItem" />
+      <nodes>
+        <classShapeMoniker Id="5d00f7c6-8745-4720-8847-4786c31153b8" />
+        <classShapeMoniker Id="77dd4f4f-653d-4c65-acfb-d9f2c199d421" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19.75 : 70.4391102005208); (21.5 : 70.4391102005208); (21.5 : 69.0785139973958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/BasicNeedsCampaign/BasicNeedsCampaign_Donation" />
+      <nodes>
+        <classShapeMoniker Id="e71eaa3c-a0a5-4ac3-ba50-4c9ed02ceebe" />
+        <classShapeMoniker Id="6e0c4c22-2ad0-4543-87ef-c86b3d26038f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19.75 : 63.1642976888021); (19.7604166666667 : 63.1642976888021 : JumpStart); (19.9270833333333 : 63.1642976888021 : JumpEnd); (21.5 : 63.1642976888021); (21.5 : 65)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/BasicNeedsSurveyItem/BasicNeedsSurveyItem_Donation" />
+      <nodes>
+        <classShapeMoniker Id="77dd4f4f-653d-4c65-acfb-d9f2c199d421" />
+        <classShapeMoniker Id="6e0c4c22-2ad0-4543-87ef-c86b3d26038f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 51.2804996744792); (4.5 : 58.8662019856771); (5.72916666666667 : 58.8662019856771 : JumpStart); (6.14583333333333 : 58.8662019856771 : JumpEnd); (6.25 : 58.8662019856771)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_User/aspnet_User_Event" />
+      <nodes>
+        <classShapeMoniker Id="964b397a-e066-49cc-b68d-68d9c6deaab1" />
+        <classShapeMoniker Id="a4b60b56-1017-4ec1-923f-10f75ac89902" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 65.9431469726563); (8.57291666666667 : 65.9431469726563 : JumpStart); (9.02083333333333 : 65.9431469726563 : JumpEnd); (9.09375 : 65.9431469726563); (9.09375 : 61.6362939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/DisasterStage/DisasterStage_EventDisasterStage" />
+      <nodes>
+        <classShapeMoniker Id="7cbe26a6-b365-4871-80d3-17d423a52a5b" />
+        <classShapeMoniker Id="114aa649-5dda-4fe4-9b2c-a55720b1b178" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 60.1970183559695); (8.625 : 60.5720183559695); (8.625 : 59.875); (8.62857443490112 : 59.8785744349011 : JumpStart); (8.99642556509888 : 60.2464255650989 : JumpEnd); (9 : 60.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Event/Event_EventDisasterStage" />
+      <nodes>
+        <classShapeMoniker Id="a4b60b56-1017-4ec1-923f-10f75ac89902" />
+        <classShapeMoniker Id="114aa649-5dda-4fe4-9b2c-a55720b1b178" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.0312525 : 51.2804996744792); (5.0312525 : 52.5489005533854); (5.72916666666667 : 52.5489005533854 : JumpStart); (6.14583333333333 : 52.5489005533854 : JumpEnd); (6.25 : 52.5489005533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_User/aspnet_User_Help" />
+      <nodes>
+        <classShapeMoniker Id="964b397a-e066-49cc-b68d-68d9c6deaab1" />
+        <classShapeMoniker Id="8337933a-f101-4d7b-9c99-7cdb48947aa7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.96874799999994 : 51.2804996744792); (4.16503647547185 : 51.4113586581271 : JumpStart); (4.30371152452815 : 51.5038086908313 : JumpEnd); (4.343748 : 51.5304996744792); (4.41666666666667 : 51.5304996744792 : JumpStart); (4.71614645833333 : 51.5304996744792 : JumpEnd); (4.94791916666667 : 51.5304996744792 : JumpStart); (5.11458583333333 : 51.5304996744792 : JumpEnd); (5.72916666666667 : 51.5304996744792 : JumpStart); (6.08333333333333 : 51.5304996744792 : JumpEnd); (6.125 : 51.5304996744792); (6.125 : 51.1987939453125); (8.47916666666667 : 51.1987939453125 : JumpStart); (9.02083333333333 : 51.1987939453125 : JumpEnd); (9.16666666666667 : 51.1987939453125 : JumpStart); (9.33333333333333 : 51.1987939453125 : JumpEnd); (9.35208364464906 : 51.1987939453125 : JumpStart); (9.51875031131573 : 51.1987939453125 : JumpEnd); (11.625 : 51.1987939453125); (11.625 : 51.7035948776042); (11.7291666666667 : 51.7035948776042 : JumpStart); (11.8958333333333 : 51.7035948776042 : JumpEnd); (12 : 51.7035948776042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_User/aspnet_User_HelpHelpStatus" />
+      <nodes>
+        <classShapeMoniker Id="964b397a-e066-49cc-b68d-68d9c6deaab1" />
+        <classShapeMoniker Id="c1559315-26e9-441e-84b4-e9358e1adb10" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 52.04974584375); (8.47916666666667 : 52.04974584375 : JumpStart); (9.33333333333333 : 52.04974584375 : JumpEnd); (9.36977392771667 : 52.04974584375 : JumpStart); (9.53644059438334 : 52.04974584375 : JumpEnd); (11.2916666666667 : 52.04974584375 : JumpStart); (11.4583333333333 : 52.04974584375 : JumpEnd); (11.6041666666667 : 52.04974584375 : JumpStart); (11.8958333333333 : 52.04974584375 : JumpEnd); (12 : 52.04974584375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Help/Help_HelpHelpStatus" />
+      <nodes>
+        <classShapeMoniker Id="8337933a-f101-4d7b-9c99-7cdb48947aa7" />
+        <classShapeMoniker Id="c1559315-26e9-441e-84b4-e9358e1adb10" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 69.75); (11.5660744349011 : 69.4339255650989 : JumpStart); (11.6839255650989 : 69.3160744349011 : JumpEnd); (11.6875 : 69.3125); (11.6875 : 51.7035948776042); (11.7291666666667 : 51.7035948776042 : JumpStart); (11.8958333333333 : 51.7035948776042 : JumpEnd); (12 : 51.7035948776042)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/HelpStatus/HelpStatus_HelpHelpStatus" />
+      <nodes>
+        <classShapeMoniker Id="899f363a-f695-43bc-8bf8-2c0988aa476d" />
+        <classShapeMoniker Id="c1559315-26e9-441e-84b4-e9358e1adb10" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 51.681120421875); (8.47916666666667 : 51.681120421875 : JumpStart); (9.02083333333333 : 51.681120421875 : JumpEnd); (9.09375 : 51.681120421875); (9.09375 : 54.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Help/Help_HelpTask" />
+      <nodes>
+        <classShapeMoniker Id="8337933a-f101-4d7b-9c99-7cdb48947aa7" />
+        <classShapeMoniker Id="0b0d2af2-0762-4dca-a6e6-45634ccfa649" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17 : 68.3119152522536); (17.5625 : 67.7494152522536); (17.5625 : 63.5901985332031); (17.75 : 63.5901985332031)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Item/Item_BasicNeedsSurveyItem" />
+      <nodes>
+        <classShapeMoniker Id="258c79c5-d1ee-43e1-86fe-c183685c5160" />
+        <classShapeMoniker Id="77dd4f4f-653d-4c65-acfb-d9f2c199d421" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.25 : 68.5344962565104); (14.7916666666667 : 68.5344962565104 : JumpStart); (14.9583333333333 : 68.5344962565104 : JumpEnd); (15 : 68.5344962565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/ItemSubType/ItemSubType_Item" />
+      <nodes>
+        <classShapeMoniker Id="9d6c193c-b176-4432-94e1-ae99e52084ab" />
+        <classShapeMoniker Id="258c79c5-d1ee-43e1-86fe-c183685c5160" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.25 : 69.8565991210938); (14.7916666666667 : 69.8565991210938 : JumpStart); (14.9583333333333 : 69.8565991210938 : JumpEnd); (15 : 69.8565991210938)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/ItemType/ItemType_Item" />
+      <nodes>
+        <classShapeMoniker Id="968a1fd5-14b1-4f3d-8c65-25b590ff828b" />
+        <classShapeMoniker Id="258c79c5-d1ee-43e1-86fe-c183685c5160" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 50.6152212187907); (5.53810590821877 : 50.6152212187907 : JumpStart); (5.70477257488544 : 50.6152212187907 : JumpEnd); (5.79166666666667 : 50.6152212187907 : JumpStart); (5.95833333333333 : 50.6152212187907 : JumpEnd); (6 : 50.6152212187907); (6 : 68.625); (6.10416666666667 : 68.625 : JumpStart); (6.27083333333333 : 68.625 : JumpEnd); (6.54166666666667 : 68.625 : JumpStart); (6.83333333333333 : 68.625 : JumpEnd); (7.3437495 : 68.625); (7.3437495 : 78)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_User/aspnet_User_Member" />
+      <nodes>
+        <classShapeMoniker Id="964b397a-e066-49cc-b68d-68d9c6deaab1" />
+        <classShapeMoniker Id="c0525201-68f8-4bab-8976-1033cffb869a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 81.1931469726563); (8.57291666666667 : 81.1931469726563 : JumpStart); (8.73958333333333 : 81.1931469726563 : JumpEnd); (9 : 81.1931469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Member/Member_MemberSession" />
+      <nodes>
+        <classShapeMoniker Id="c0525201-68f8-4bab-8976-1033cffb869a" />
+        <classShapeMoniker Id="b4124886-a636-43c0-8b2b-4ac6864318e5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 60.2000952790465); (8.59732443490112 : 60.5474197139476 : JumpStart); (8.77767556509888 : 60.7277708441454 : JumpEnd); (8.78125 : 60.7313452790465); (8.78125 : 67.4431469726563); (8.79166666666667 : 67.4431469726563 : JumpStart); (8.95833333333333 : 67.4431469726563 : JumpEnd); (9 : 67.4431469726563)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Event/Event_OrganizationEvent" />
+      <nodes>
+        <classShapeMoniker Id="a4b60b56-1017-4ec1-923f-10f75ac89902" />
+        <classShapeMoniker Id="b1d5a2f9-4afe-4e5d-a630-42e950f39e47" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 49.3710029593099); (6.04166666666667 : 49.3710029593099 : JumpStart); (6.20833333333333 : 49.3710029593099 : JumpEnd); (6.25 : 49.3710029593099)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_User/aspnet_User_Porchlight" />
+      <nodes>
+        <classShapeMoniker Id="964b397a-e066-49cc-b68d-68d9c6deaab1" />
+        <classShapeMoniker Id="1e3aaef2-c520-4c94-99ff-206103870b42" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 19.1354484049479); (8.63541666666667 : 19.1354484049479 : JumpStart); (9.02083333333333 : 19.1354484049479 : JumpEnd); (10.25 : 19.1354484049479); (10.25 : 24.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/ProfessionalService/ProfessionalService_ProfessionalServiceSkill" />
+      <nodes>
+        <classShapeMoniker Id="d1179b10-659a-444b-a147-ba529172a82a" />
+        <classShapeMoniker Id="2cc71a80-1fce-4d45-9bdc-48f881fe744b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.234374 : 51.2804996744792); (4.234374 : 54.40625); (4.41666666666667 : 54.40625 : JumpStart); (4.58333333333333 : 54.40625 : JumpEnd); (5.72916666666667 : 54.40625 : JumpStart); (6.27083333333333 : 54.40625 : JumpEnd); (8.47916666666667 : 54.40625 : JumpStart); (9.33333333333333 : 54.40625 : JumpEnd); (9.41876286075814 : 54.40625 : JumpStart); (9.58542952742481 : 54.40625 : JumpEnd); (11.2353337867721 : 54.40625 : JumpStart); (11.8958333333333 : 54.40625 : JumpEnd); (12 : 54.40625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_User/aspnet_User_RebuildPost" />
+      <nodes>
+        <classShapeMoniker Id="964b397a-e066-49cc-b68d-68d9c6deaab1" />
+        <classShapeMoniker Id="f5d3c6ed-f2d9-4e06-87ef-d8d76e7163e5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.7031215 : 51.2804996744792); (3.7031215 : 57.2187505); (4.41666666666667 : 57.2187505 : JumpStart); (4.58333333333333 : 57.2187505 : JumpEnd); (5.72916666666667 : 57.2187505 : JumpStart); (6.27083333333333 : 57.2187505 : JumpEnd); (8.47916666666667 : 57.2187505 : JumpStart); (8.95833333333333 : 57.2187505 : JumpEnd); (9 : 57.2187505)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_User/aspnet_User_RebuildSliderTick" />
+      <nodes>
+        <classShapeMoniker Id="964b397a-e066-49cc-b68d-68d9c6deaab1" />
+        <classShapeMoniker Id="b849ac0d-8a41-466f-ae5e-fa53530eadb4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.468748 : 25.8862939453125); (7.468748 : 27.125); (8.58331716153811 : 27.125 : JumpStart); (8.83333333333333 : 27.125 : JumpEnd); (8.875 : 27.125); (8.875 : 75.0681469726563); (9 : 75.0681469726563)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Skill/Skill_OrganizationSkill" />
+      <nodes>
+        <classShapeMoniker Id="7cbd121b-5aca-472d-aea1-7b30dfbf9e88" />
+        <classShapeMoniker Id="48e8fb29-0437-4b74-a62b-7eb09079aa76" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 25.1931469726563); (8.55533015819628 : 25.1931469726563 : JumpStart); (9.02083333333333 : 25.1931469726563 : JumpEnd); (9.25 : 25.1931469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Skill/Skill_ProfessionalServiceSkill" />
+      <nodes>
+        <classShapeMoniker Id="7cbd121b-5aca-472d-aea1-7b30dfbf9e88" />
+        <classShapeMoniker Id="2cc71a80-1fce-4d45-9bdc-48f881fe744b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 33.1065991210938); (5.91666666666667 : 33.1065991210938 : JumpStart); (6.20833333333333 : 33.1065991210938 : JumpEnd); (8.60416666666667 : 33.1065991210938 : JumpStart); (9.02083333333333 : 33.1065991210938 : JumpEnd); (9.25 : 33.1065991210938); (9.25 : 56.75); (9.46748664998271 : 56.75 : JumpStart); (9.63415331664938 : 56.75 : JumpEnd); (10 : 56.75); (10 : 57)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Slider/Slider_RebuildSliderTick" />
+      <nodes>
+        <classShapeMoniker Id="cf5ddcda-991e-4b6a-9d3f-5a31d9f19db3" />
+        <classShapeMoniker Id="b849ac0d-8a41-466f-ae5e-fa53530eadb4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 33.028305547805); (8.60737300436327 : 33.0589835490516 : JumpStart); (9.01762699563673 : 33.1761989751298 : JumpEnd); (9.3125 : 33.2604484049479); (9.0625 : 33.2604484049479); (9.24826797283425 : 42.1964054242908 : JumpStart); (9.25173202716575 : 42.3630360880516 : JumpEnd); (9.5560171875 : 57)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/SliderTick/SliderTick_RebuildSliderTick" />
+      <nodes>
+        <classShapeMoniker Id="64943815-b489-4ddb-babe-0384e1697756" />
+        <classShapeMoniker Id="b849ac0d-8a41-466f-ae5e-fa53530eadb4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 33.1354484049479); (5.91666666666667 : 33.1354484049479 : JumpStart); (6.20833333333333 : 33.1354484049479 : JumpEnd); (6.5 : 33.1354484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Slider/Slider_SliderTick" />
+      <nodes>
+        <classShapeMoniker Id="cf5ddcda-991e-4b6a-9d3f-5a31d9f19db3" />
+        <classShapeMoniker Id="64943815-b489-4ddb-babe-0384e1697756" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.031252 : 49.125); (5.031252 : 39.2892976888021); (6.04166666666667 : 39.2892976888021 : JumpStart); (6.20833333333333 : 39.2892976888021 : JumpEnd); (6.25 : 39.2892976888021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_User/aspnet_User_SurveyCaseWorker" />
+      <nodes>
+        <classShapeMoniker Id="964b397a-e066-49cc-b68d-68d9c6deaab1" />
+        <classShapeMoniker Id="7e4597b0-3a9c-4122-8256-26591775bc4a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17 : 60.6065991210938); (17.75 : 60.6065991210938)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/BasicNeedsSurvey/BasicNeedsSurvey_SurveyPhoto" />
+      <nodes>
+        <classShapeMoniker Id="5d00f7c6-8745-4720-8847-4786c31153b8" />
+        <classShapeMoniker Id="4e76f027-9f74-465d-bbdd-1440131fefe3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17 : 58.2804996744792); (17.375 : 58.6554996744792); (17.375 : 59.8970475605469); (17.75 : 59.8970475605469)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Photo/Photo_SurveyPhoto" />
+      <nodes>
+        <classShapeMoniker Id="792ed609-2569-48dd-9350-ce6880fc2431" />
+        <classShapeMoniker Id="4e76f027-9f74-465d-bbdd-1440131fefe3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17 : 60.0615374615385); (17.5625 : 59.4990374615385); (17.5625 : 56.5681469726563); (17.75 : 56.5681469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/BasicNeedsSurvey/BasicNeedsSurvey_SurveyTimesheet" />
+      <nodes>
+        <classShapeMoniker Id="5d00f7c6-8745-4720-8847-4786c31153b8" />
+        <classShapeMoniker Id="fb3185c2-d399-4a2a-be62-a503c233eb96" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 41.8181469726563); (8.35416916666667 : 41.8181469726563 : JumpStart); (8.96284533868475 : 41.8181469726563 : JumpEnd); (9 : 41.8181469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Video/Video_SurveyVideo" />
+      <nodes>
+        <classShapeMoniker Id="00a48f4f-b1db-47d0-9462-26c442560e31" />
+        <classShapeMoniker Id="93deb472-4221-4c63-86e2-e9213f8c1d0d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 61.5634254047476); (8.43208144378313 : 61.3813439609645 : JumpStart); (8.54993257398089 : 61.2634928307667 : JumpEnd); (8.6875 : 61.1259254047476); (8.6875 : 55.5681469726563); (8.72916666666667 : 55.5681469726563 : JumpStart); (8.95833333333333 : 55.5681469726563 : JumpEnd); (9 : 55.5681469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Task/Task_HelpTask" />
+      <nodes>
+        <classShapeMoniker Id="3e14f002-1dfe-4f23-8075-73fc3804d2f7" />
+        <classShapeMoniker Id="0b0d2af2-0762-4dca-a6e6-45634ccfa649" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 25.8862939453125); (8.59196561574681 : 25.9782595610593 : JumpStart); (8.87142556509888 : 26.2577195104114 : JumpEnd); (8.875 : 26.2612939453125); (11.875 : 26.2612939453125); (11.875 : 39.875); (11.9723244349011 : 39.9723244349011 : JumpStart); (12.0901755650989 : 40.0901755650989 : JumpEnd); (12.25 : 40.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Skill/Skill_TaskSkill" />
+      <nodes>
+        <classShapeMoniker Id="7cbd121b-5aca-472d-aea1-7b30dfbf9e88" />
+        <classShapeMoniker Id="aeff280d-f5e3-494d-a90c-e389ebcb4a5a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.25 : 61.5); (7.25 : 60.4824039713542); (8.5625 : 60.4824039713542); (8.5625 : 40.7532462565104); (8.60416666666667 : 40.7532462565104 : JumpStart); (9.02083333333333 : 40.7532462565104 : JumpEnd); (9.13493306804132 : 40.7532462565104 : JumpStart); (9.33333333333334 : 40.7532462565104 : JumpEnd); (11.3229166666667 : 40.7532462565104 : JumpStart); (11.4895833333333 : 40.7532462565104 : JumpEnd); (11.9479166666667 : 40.7532462565104 : JumpStart); (12.1145833333333 : 40.7532462565104 : JumpEnd); (12.25 : 40.7532462565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Task/Task_TaskSkill" />
+      <nodes>
+        <classShapeMoniker Id="3e14f002-1dfe-4f23-8075-73fc3804d2f7" />
+        <classShapeMoniker Id="aeff280d-f5e3-494d-a90c-e389ebcb4a5a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 62.4719962565104); (5.72916666666667 : 62.4719962565104 : JumpStart); (6.14583333333333 : 62.4719962565104 : JumpEnd); (6.25 : 62.4719962565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/TaskStatus/TaskStatus_Task" />
+      <nodes>
+        <classShapeMoniker Id="7dc90ac4-4e45-4bbb-acf5-0dac04d83649" />
+        <classShapeMoniker Id="3e14f002-1dfe-4f23-8075-73fc3804d2f7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.15625 : 49.4824039713542); (14.15625 : 56.0440991210938); (14.5416666666667 : 56.0440991210938 : JumpStart); (14.9583333333333 : 56.0440991210938 : JumpEnd); (17.75 : 56.0440991210938)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Timesheet/Timesheet_SurveyTimesheet" />
+      <nodes>
+        <classShapeMoniker Id="737c2478-c07f-4ae9-89fa-b117b8e436ae" />
+        <classShapeMoniker Id="fb3185c2-d399-4a2a-be62-a503c233eb96" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.99846153846154 : 49.125); (4.85665399940334 : 49.0127219811244 : JumpStart); (4.7002919236686 : 48.8889202128448 : JumpEnd); (4.6457660458551 : 48.845748618591 : JumpStart); (4.5150978931923 : 48.7422903581307 : JumpEnd); (4.2997080763314 : 48.5717525850071 : JumpStart); (4.1690399236686 : 48.4682943245468 : JumpEnd); (4.0340820763314 : 48.361439640858 : JumpStart); (3.9034139236686 : 48.2579813803977 : JumpEnd); (3.70312125 : 48.0993969726563); (3.88541466666667 : 48.0993969726563 : JumpStart); (4.05208133333333 : 48.0993969726563 : JumpEnd); (4.15104066666667 : 48.0993969726563 : JumpStart); (4.31770733333333 : 48.0993969726563 : JumpEnd); (4.68229266666667 : 48.0993969726563 : JumpStart); (5.11458533333333 : 48.0993969726563 : JumpEnd); (5.21354466666667 : 48.0993969726563 : JumpStart); (5.38021133333333 : 48.0993969726563 : JumpEnd); (5.79166666666667 : 48.0993969726563 : JumpStart); (5.95833333333333 : 48.0993969726563 : JumpEnd); (6.04166666666667 : 48.0993969726563 : JumpStart); (6.20833333333333 : 48.0993969726563 : JumpEnd); (8.47916666666667 : 48.0993969726563 : JumpStart); (9.05384261552344 : 48.0993969726563 : JumpEnd); (9.16666666666667 : 48.0993969726563 : JumpStart); (9.45431751565963 : 48.0993969726563 : JumpEnd); (12.25 : 48.0993969726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_User/aspnet_User_Timesheet" />
+      <nodes>
+        <classShapeMoniker Id="964b397a-e066-49cc-b68d-68d9c6deaab1" />
+        <classShapeMoniker Id="737c2478-c07f-4ae9-89fa-b117b8e436ae" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 34.6627640165264); (12.03125 : 35.1940140165264); (12.03125 : 47.5000005); (12.25 : 47.5000005)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/TaskType/TaskType_Timesheet" />
+      <nodes>
+        <classShapeMoniker Id="2b0688f4-f5a0-47a2-97a5-ae77623eac6d" />
+        <classShapeMoniker Id="737c2478-c07f-4ae9-89fa-b117b8e436ae" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 50.8578153706869); (5.57855356910737 : 50.8578153706869 : JumpStart); (5.74522023577404 : 50.8578153706869 : JumpEnd); (5.9375 : 50.8578153706869); (5.9375 : 51.0737939453125); (5.97916666666667 : 51.0737939453125 : JumpStart); (6.27083333333333 : 51.0737939453125 : JumpEnd); (8.47916666666667 : 51.0737939453125 : JumpStart); (9.02083333333333 : 51.0737939453125 : JumpEnd); (9.16666666666667 : 51.0737939453125 : JumpStart); (9.33333333333333 : 51.0737939453125 : JumpEnd); (9.34948504255708 : 51.0737939453125 : JumpStart); (9.51615170922375 : 51.0737939453125 : JumpEnd); (11.9375 : 51.0737939453125); (11.9375 : 56.625); (13 : 56.625); (13 : 57)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_User/aspnet_User_UserEvent" />
+      <nodes>
+        <classShapeMoniker Id="964b397a-e066-49cc-b68d-68d9c6deaab1" />
+        <classShapeMoniker Id="303747c2-6bdb-4ddd-b386-0f97e1a37019" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.625 : 59.8797566779848); (8.63925342313226 : 59.8752752135088 : JumpStart); (9.01699657686773 : 59.7565077771665 : JumpEnd); (9.06857939790197 : 59.7402894569853 : JumpStart); (9.22757255163744 : 59.6902999096476 : JumpEnd); (11.2955034231323 : 59.0401151327381 : JumpStart); (11.8919965768677 : 58.8525698073911 : JumpEnd); (13.375 : 58.3862939453125); (13.375 : 59.8797566779848)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Event/Event_UserEvent" />
+      <nodes>
+        <classShapeMoniker Id="a4b60b56-1017-4ec1-923f-10f75ac89902" />
+        <classShapeMoniker Id="303747c2-6bdb-4ddd-b386-0f97e1a37019" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 50.8325971682943); (5.57434894467342 : 50.8325971682943 : JumpStart); (5.74101561134009 : 50.8325971682943 : JumpEnd); (5.79166666666667 : 50.8325971682943 : JumpStart); (6.27083333333333 : 50.8325971682943 : JumpEnd); (8.47916666666667 : 50.8325971682943 : JumpStart); (9.02083333333333 : 50.8325971682943 : JumpEnd); (9.25 : 50.8325971682943)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_User/aspnet_User_UserInteractionType" />
+      <nodes>
+        <classShapeMoniker Id="964b397a-e066-49cc-b68d-68d9c6deaab1" />
+        <classShapeMoniker Id="8710aa83-d521-423f-a575-956a8001084b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.875 : 22.8862939453125); (7.875 : 24.25); (8.625 : 24.25); (8.68629286594722 : 28.4808498408523 : JumpStart); (8.68870713405278 : 28.6474990205301 : JumpEnd); (8.71754286594722 : 30.6379370561978 : JumpStart); (8.71995713405278 : 30.8045862358757 : JumpEnd); (8.74879286594722 : 32.7950242715435 : JumpStart); (8.75120713405278 : 32.9616734512213 : JumpEnd); (8.81129286594722 : 37.1091987022346 : JumpStart); (8.81370713405278 : 37.2758478819124 : JumpEnd); (8.87379286594722 : 41.4233731329258 : JumpStart); (8.87620713405278 : 41.5900223126036 : JumpEnd); (8.93629286594722 : 45.737547563617 : JumpStart); (8.93870713405278 : 45.9041967432948 : JumpEnd); (9 : 50.1350465841471); (9.16666666666667 : 50.1350465841471 : JumpStart); (9.49663626237125 : 50.1350465841471 : JumpEnd); (9.625 : 50.1350465841471)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/InteractionType/InteractionType_UserInteractionType" />
+      <nodes>
+        <classShapeMoniker Id="808f7fa1-0168-441c-9cd0-3aeb9a8116a6" />
+        <classShapeMoniker Id="8710aa83-d521-423f-a575-956a8001084b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.968748 : 49.125); (3.968748 : 47.082148844401); (4.15104066666667 : 47.082148844401 : JumpStart); (4.31770733333333 : 47.082148844401 : JumpEnd); (4.68229266666667 : 47.082148844401 : JumpStart); (4.84895933333333 : 47.082148844401 : JumpEnd); (4.87291493735434 : 47.082148844401 : JumpStart); (5.11458533333333 : 47.082148844401 : JumpEnd); (5.21354466666667 : 47.082148844401 : JumpStart); (5.38021133333333 : 47.082148844401 : JumpEnd); (5.79166666666667 : 47.082148844401 : JumpStart); (5.95833333333333 : 47.082148844401 : JumpEnd); (6.04166666666667 : 47.082148844401 : JumpStart); (6.20833333333333 : 47.082148844401 : JumpEnd); (8.47916666666667 : 47.082148844401 : JumpStart); (9.08333333333333 : 47.082148844401 : JumpEnd); (9.25 : 47.082148844401)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_User/aspnet_User_UserSkill" />
+      <nodes>
+        <classShapeMoniker Id="964b397a-e066-49cc-b68d-68d9c6deaab1" />
+        <classShapeMoniker Id="0509462e-25bc-43c9-a253-854aec59c1cb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.468748 : 25.8862939453125); (7.468748 : 26.875); (8.6875 : 26.875); (8.6875 : 46.7598224222005); (8.72916666666667 : 46.7598224222005 : JumpStart); (9.08333333333333 : 46.7598224222005 : JumpEnd); (9.25 : 46.7598224222005)]" fixedFrom="Algorithm" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Skill/Skill_UserSkill" />
+      <nodes>
+        <classShapeMoniker Id="7cbd121b-5aca-472d-aea1-7b30dfbf9e88" />
+        <classShapeMoniker Id="0509462e-25bc-43c9-a253-854aec59c1cb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.77692307692308 : 49.125); (5.02396487042803 : 46.3107294407538 : JumpStart); (5.03853912957198 : 46.1447012240309 : JumpEnd); (5.273439 : 43.46875); (5.79166666666667 : 43.46875 : JumpStart); (5.95833333333333 : 43.46875 : JumpEnd); (6.04166666666667 : 43.46875 : JumpStart); (6.20833333333333 : 43.46875 : JumpEnd); (8.47916666666667 : 43.46875 : JumpStart); (9.02083333333333 : 43.46875 : JumpEnd); (9.25 : 43.46875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_User/aspnet_User_UserSliderTick" />
+      <nodes>
+        <classShapeMoniker Id="964b397a-e066-49cc-b68d-68d9c6deaab1" />
+        <classShapeMoniker Id="847ed9d3-17c3-4658-a948-9b02d6cbe59c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.4375025 : 34.0208968098958); (8.4375025 : 43.265625); (8.47916666666667 : 43.265625 : JumpStart); (9.02083333333333 : 43.265625 : JumpEnd); (9.25 : 43.265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/SliderTick/SliderTick_UserSliderTick" />
+      <nodes>
+        <classShapeMoniker Id="64943815-b489-4ddb-babe-0384e1697756" />
+        <classShapeMoniker Id="847ed9d3-17c3-4658-a948-9b02d6cbe59c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.632813125 : 51.2804996744792); (4.632813125 : 53.8357975260417); (5.72916666666667 : 53.8357975260417 : JumpStart); (6.27083333333333 : 53.8357975260417 : JumpEnd); (8.47916666666667 : 53.8357975260417 : JumpStart); (9.17708333333333 : 53.8357975260417 : JumpEnd); (9.25 : 53.8357975260417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_User/aspnet_User_UserTask" />
+      <nodes>
+        <classShapeMoniker Id="964b397a-e066-49cc-b68d-68d9c6deaab1" />
+        <classShapeMoniker Id="f31d6915-70e2-4dc9-acfe-f6755d510ccf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 61.9118969726563); (8.62471332865436 : 60.9953863669924 : JumpStart); (8.96903667134564 : 60.1532065692056 : JumpEnd); (11.3434633286544 : 54.345601001479 : JumpStart); (11.4065366713456 : 54.1913300346073 : JumpEnd); (11.53125 : 53.8862939453125); (11.53125 : 61.9118969726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Task/Task_UserTask" />
+      <nodes>
+        <classShapeMoniker Id="3e14f002-1dfe-4f23-8075-73fc3804d2f7" />
+        <classShapeMoniker Id="f31d6915-70e2-4dc9-acfe-f6755d510ccf" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4e0d6d7a-f479-4a71-9dcc-86f20fa71c9b" absoluteBounds="17.875, 38, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/RebuildRebuildStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5b74d20d-4254-424c-bce8-c68143d9ad5f" absoluteBounds="17.89, 38.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="230d33ff-0c50-470f-9aad-9c45a98ec4c5" absoluteBounds="16, 71.375, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/RebuildSurvey" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d08da849-c1f7-4bad-99e2-69e6f2ab1e17" absoluteBounds="16.015, 71.835, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.25 : 63.8077688066907); (14.625 : 64.1827688066907); (14.625 : 72.8373527018229); (14.7916666666667 : 72.8373527018229 : JumpStart); (14.9583333333333 : 72.8373527018229 : JumpEnd); (16 : 72.8373527018229)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Address/Address_RebuildSurvey" />
+      <nodes>
+        <classShapeMoniker Id="80db1481-b568-4cef-a37f-b77de8673f45" />
+        <classShapeMoniker Id="230d33ff-0c50-470f-9aad-9c45a98ec4c5" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4de2dcf5-8c93-4c68-84a9-fca1e7fd683f" absoluteBounds="9, 14.25, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/OrganizationOrganization" />
+      <nestedChildShapes>
+        <elementListCompartment Id="da61988b-e04c-47c6-8d45-767ca30bc007" absoluteBounds="9.015, 14.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0797b8c2-0f3d-4ae4-96fe-51e23f6a67b4" absoluteBounds="6.25, 13, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/Organization" />
+      <nestedChildShapes>
+        <elementListCompartment Id="04d4fb31-f781-46f5-8c19-130492bf8352" absoluteBounds="6.265, 13.46, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.25 : 14.5429010917468); (8.37653946153846 : 17.5881168619792); (8.63541666666667 : 17.5881168619792 : JumpStart); (8.80208333333333 : 17.5881168619792 : JumpEnd); (14.75 : 17.5881168619792); (14.75 : 59.75); (14.8160744349011 : 59.8160744349011 : JumpStart); (14.9339255650989 : 59.9339255650989 : JumpEnd); (15 : 60)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Organization/Organization_BasicNeedsSurvey" />
+      <nodes>
+        <classShapeMoniker Id="0797b8c2-0f3d-4ae4-96fe-51e23f6a67b4" />
+        <classShapeMoniker Id="5d00f7c6-8745-4720-8847-4786c31153b8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.648439 : 17.4631168619792); (7.648439 : 18); (8.63541666666667 : 18 : JumpStart); (8.89583333333333 : 18 : JumpEnd); (8.9375 : 18); (8.9375 : 67.0653214863281); (9 : 67.0653214863281)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Organization/Organization_OrganizationEvent" />
+      <nodes>
+        <classShapeMoniker Id="0797b8c2-0f3d-4ae4-96fe-51e23f6a67b4" />
+        <classShapeMoniker Id="b1d5a2f9-4afe-4e5d-a630-42e950f39e47" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.585935 : 17.4631168619792); (6.585935 : 18.125); (8.75 : 18.125); (8.75 : 65.4715739863281); (8.79166666666667 : 65.4715739863281 : JumpStart); (9.17708333333333 : 65.4715739863281 : JumpEnd); (11.5416666666667 : 65.4715739863281 : JumpStart); (11.7708333333333 : 65.4715739863281 : JumpEnd); (12 : 65.4715739863281)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Organization/Organization_OrganizationRebuild" />
+      <nodes>
+        <classShapeMoniker Id="0797b8c2-0f3d-4ae4-96fe-51e23f6a67b4" />
+        <classShapeMoniker Id="286d5e88-f9a4-46b6-ab64-3a7e8bfe9598" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 15.2315584309896); (8.71875 : 15.2315584309896); (8.71875 : 74); (8.79166666666667 : 74 : JumpStart); (8.95833333333333 : 74 : JumpEnd); (10 : 74); (10 : 74.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Organization/Organization_OrganizationSkill" />
+      <nodes>
+        <classShapeMoniker Id="0797b8c2-0f3d-4ae4-96fe-51e23f6a67b4" />
+        <classShapeMoniker Id="48e8fb29-0437-4b74-a62b-7eb09079aa76" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 15.7848783365885); (8.63541666666667 : 15.7848783365885 : JumpStart); (8.80208333333333 : 15.7848783365885 : JumpEnd); (9 : 15.7848783365885)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Organization/Organization_OrganizationOrganization" />
+      <nodes>
+        <classShapeMoniker Id="0797b8c2-0f3d-4ae4-96fe-51e23f6a67b4" />
+        <classShapeMoniker Id="4de2dcf5-8c93-4c68-84a9-fca1e7fd683f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 14.6782792154948); (9 : 14.6782792154948)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Organization/Organization_OrganizationOrganization1" />
+      <nodes>
+        <classShapeMoniker Id="0797b8c2-0f3d-4ae4-96fe-51e23f6a67b4" />
+        <classShapeMoniker Id="4de2dcf5-8c93-4c68-84a9-fca1e7fd683f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 49.8874387631022); (6.125 : 49.8874387631022); (6.125 : 17.8381168619792); (6.50260166666667 : 17.8381168619792 : JumpStart); (6.66926833333333 : 17.8381168619792 : JumpEnd); (6.984374 : 17.8381168619792); (6.984374 : 17.4631168619792)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_User/aspnet_User_Organization" />
+      <nodes>
+        <classShapeMoniker Id="964b397a-e066-49cc-b68d-68d9c6deaab1" />
+        <classShapeMoniker Id="0797b8c2-0f3d-4ae4-96fe-51e23f6a67b4" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ef0aeb52-753e-46fb-9e33-104a8557e1cf" absoluteBounds="4.375, 68.875, 2, 4.2708154296875">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/Profile" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d628127e-57c3-49e9-a37c-c161d277113a" absoluteBounds="4.39, 69.335, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 50.3726270668945); (5.875 : 50.3726270668945); (5.875 : 68.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_User/aspnet_User_Profile" />
+      <nodes>
+        <classShapeMoniker Id="964b397a-e066-49cc-b68d-68d9c6deaab1" />
+        <classShapeMoniker Id="ef0aeb52-753e-46fb-9e33-104a8557e1cf" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="33673ec9-7bf7-4a76-916e-20faa3e8cb94" absoluteBounds="15.125, 38.125, 2, 1.5785953776041595">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/RebuildStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f07a5db4-a8e1-4293-8490-106b9dd340b5" absoluteBounds="15.14, 38.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d68d26dc-a50c-41f1-bc39-2feb12d27182" absoluteBounds="9, 86.5, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/RebuildQualifier" />
+      <nestedChildShapes>
+        <elementListCompartment Id="23c2eaf0-bed3-45b7-ba84-f7b071d7c3a4" absoluteBounds="9.015, 86.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a39e71c0-7b88-4569-bb15-01c25786fb01" absoluteBounds="6.25, 85.5, 2, 3.3093082682291595">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/Rebuild" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ec24ba57-56d8-4f5a-bcc8-8410fc1f9fd6" absoluteBounds="6.265, 85.96, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(17.125 : 38.9142976888021); (17.875 : 38.9142976888021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/RebuildStatus/RebuildStatus_RebuildRebuildStatus" />
+      <nodes>
+        <classShapeMoniker Id="33673ec9-7bf7-4a76-916e-20faa3e8cb94" />
+        <classShapeMoniker Id="4e0d6d7a-f479-4a71-9dcc-86f20fa71c9b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.6875005 : 39.7035953776042); (15.6875005 : 46.375); (14.875 : 46.375); (14.875 : 87.1931469726563); (11 : 87.1931469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/RebuildStatus/RebuildStatus_RebuildQualifier" />
+      <nodes>
+        <classShapeMoniker Id="33673ec9-7bf7-4a76-916e-20faa3e8cb94" />
+        <classShapeMoniker Id="d68d26dc-a50c-41f1-bc39-2feb12d27182" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 85.96875); (12.09375 : 85.96875); (12.09375 : 66.7708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Rebuild/Rebuild_OrganizationRebuild" />
+      <nodes>
+        <classShapeMoniker Id="a39e71c0-7b88-4569-bb15-01c25786fb01" />
+        <classShapeMoniker Id="286d5e88-f9a4-46b6-ab64-3a7e8bfe9598" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 85.5353836153846); (8.66038361538462 : 85.125); (11.625 : 85.125); (11.625 : 56.3397073946815); (11.6285744349011 : 56.3361329597804 : JumpStart); (11.7464255650989 : 56.2182818295826 : JumpEnd); (11.7535744349011 : 56.2111329597804 : JumpStart); (11.8714255650989 : 56.0932818295826 : JumpEnd); (11.8785744349011 : 56.0861329597804 : JumpStart); (11.9964255650989 : 55.9682818295826 : JumpEnd); (12.001509152494 : 55.9631982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Rebuild/Rebuild_RebuildPost" />
+      <nodes>
+        <classShapeMoniker Id="a39e71c0-7b88-4569-bb15-01c25786fb01" />
+        <classShapeMoniker Id="f5d3c6ed-f2d9-4e06-87ef-d8d76e7163e5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.24846153846154 : 85.5); (8.65625 : 85.0922115384615); (8.65625 : 57.9815991210938); (8.66666666666667 : 57.9815991210938 : JumpStart); (8.95833333333333 : 57.9815991210938 : JumpEnd); (9 : 57.9815991210938)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Rebuild/Rebuild_RebuildSliderTick" />
+      <nodes>
+        <classShapeMoniker Id="a39e71c0-7b88-4569-bb15-01c25786fb01" />
+        <classShapeMoniker Id="b849ac0d-8a41-466f-ae5e-fa53530eadb4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 88.3790511067708); (19.84375 : 88.3790511067708); (19.84375 : 39.7708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Rebuild/Rebuild_RebuildRebuildStatus" />
+      <nodes>
+        <classShapeMoniker Id="a39e71c0-7b88-4569-bb15-01c25786fb01" />
+        <classShapeMoniker Id="4e0d6d7a-f479-4a71-9dcc-86f20fa71c9b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 87.1931469726563); (9 : 87.1931469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Rebuild/Rebuild_RebuildQualifier" />
+      <nodes>
+        <classShapeMoniker Id="a39e71c0-7b88-4569-bb15-01c25786fb01" />
+        <classShapeMoniker Id="d68d26dc-a50c-41f1-bc39-2feb12d27182" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 49.4022504593099); (6.0625 : 49.4022504593099); (6.0625 : 68.375); (6.10416666666667 : 68.375 : JumpStart); (6.27083333333333 : 68.375 : JumpEnd); (6.625 : 68.375); (6.625 : 77.75); (6 : 77.75); (6 : 85.125); (6.04166666666667 : 85.125 : JumpStart); (6.20833333333333 : 85.125 : JumpEnd); (6.61940405128205 : 85.125 : JumpStart); (6.78607071794871 : 85.125 : JumpEnd); (7.21797876923077 : 85.125); (7.21797876923077 : 85.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_User/aspnet_User_Rebuild" />
+      <nodes>
+        <classShapeMoniker Id="964b397a-e066-49cc-b68d-68d9c6deaab1" />
+        <classShapeMoniker Id="a39e71c0-7b88-4569-bb15-01c25786fb01" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 49.6448446112061); (5.97916666666667 : 49.6448446112061 : JumpStart); (6.14583333333333 : 49.6448446112061 : JumpEnd); (6.1875 : 49.6448446112061); (6.1875 : 68.75); (6.54166666666667 : 68.75 : JumpStart); (6.83333333333333 : 68.75 : JumpEnd); (6.875 : 68.75); (6.875 : 77.5); (6.83333333333333 : 77.5 : JumpStart); (6.54166666666667 : 77.5 : JumpEnd); (5.75 : 77.5); (5.75 : 84.875); (5.91666666666667 : 84.875 : JumpStart); (6.20833333333333 : 84.875 : JumpEnd); (6.70273738461538 : 84.875); (6.70273738461538 : 85.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_User/aspnet_User_Rebuild1" />
+      <nodes>
+        <classShapeMoniker Id="964b397a-e066-49cc-b68d-68d9c6deaab1" />
+        <classShapeMoniker Id="a39e71c0-7b88-4569-bb15-01c25786fb01" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 50.9970571579997); (5.60176931668714 : 50.9970571579997 : JumpStart); (5.7684359833538 : 50.9970571579997 : JumpEnd); (5.8125 : 50.9970571579997); (5.8125 : 68.5); (5.91666666666667 : 68.5 : JumpStart); (6.08333333333333 : 68.5 : JumpEnd); (6.10416666666667 : 68.5 : JumpStart); (6.27083333333333 : 68.5 : JumpEnd); (6.54166666666667 : 68.5 : JumpStart); (6.70833333333333 : 68.5 : JumpEnd); (6.75 : 68.5); (6.75 : 77.875); (6.125 : 77.875); (6.125 : 85.25); (6.61940405128205 : 85.25 : JumpStart); (6.78607071794871 : 85.25 : JumpEnd); (7.13464543589744 : 85.25 : JumpStart); (7.3013121025641 : 85.25 : JumpEnd); (7.73322015384615 : 85.25); (7.73322015384615 : 85.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_User/aspnet_User_Rebuild2" />
+      <nodes>
+        <classShapeMoniker Id="964b397a-e066-49cc-b68d-68d9c6deaab1" />
+        <classShapeMoniker Id="a39e71c0-7b88-4569-bb15-01c25786fb01" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2787802f-d8f4-4223-8dc9-3e148c895941" absoluteBounds="9.25, 63, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/CrowdReliefDBDataContext/UserOrganization" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9be58ff1-ca30-45ee-b631-ff599899813f" absoluteBounds="9.265, 63.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 51.2174217514022); (5.75357443490112 : 51.4709961863034 : JumpStart); (5.93392556509888 : 51.6513473165011 : JumpEnd); (5.9375 : 51.6549217514022); (5.9375 : 64.0521463098958); (5.97916666666667 : 64.0521463098958 : JumpStart); (6.27083333333333 : 64.0521463098958 : JumpEnd); (8.57291666666667 : 64.0521463098958 : JumpStart); (9.17708333333333 : 64.0521463098958 : JumpEnd); (9.25 : 64.0521463098958)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/aspnet_User/aspnet_User_UserOrganization" />
+      <nodes>
+        <classShapeMoniker Id="964b397a-e066-49cc-b68d-68d9c6deaab1" />
+        <classShapeMoniker Id="2787802f-d8f4-4223-8dc9-3e148c895941" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.9804715 : 17.4631168619792); (7.9804715 : 17.875); (8.63541666666667 : 17.875 : JumpStart); (8.80208333333333 : 17.875 : JumpEnd); (8.8125 : 17.875); (8.8125 : 63.4948211549479); (8.85416666666667 : 63.4948211549479 : JumpStart); (9.17708333333333 : 63.4948211549479 : JumpEnd); (9.25 : 63.4948211549479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CrowdReliefDBDataContext/Organization/Organization_UserOrganization" />
+      <nodes>
+        <classShapeMoniker Id="0797b8c2-0f3d-4ae4-96fe-51e23f6a67b4" />
+        <classShapeMoniker Id="2787802f-d8f4-4223-8dc9-3e148c895941" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
